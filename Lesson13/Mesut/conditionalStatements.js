@@ -198,6 +198,25 @@
 
 // 10. Write a program that asks the user to enter their age and whether they are a student (yes or no). If the age is less than 18 and the user is a student, print "You are a student and not old enough to vote". If the age is between 18 and 65 (inclusive) and the user is not a student, print "You are eligible to vote". If the age is greater than 65, print "You are a senior citizen". If the user is a student but their age is greater than or equal to 18, print "You are old enough to vote".
 
+// let userAge = Number(prompt("how old are you?"));
+// let education = prompt("Are you a student?\n1- If you a student press 1\n2-If you are NOT student press 2")
+
+// if (userAge<18 &&  education==1){
+//   console.log( "You are a student and not old enough to vote")
+
+// }
+// else if (userAge<=65 && userAge>= 18 && education==2){
+//   console.log("You are eligible to vote")
+// }
+// else if (userAge>65){
+//   console.log("You are a senior citizen")
+// }
+
+// else if(education==1 && userAge>=18 ){
+//     console.log("You are old enough to vote")
+//   }
+
+
 // 11. Write a program that asks the user to enter their salary and their years of experience. If the salary is less than $30,000 and the years of experience are less than 5, print "Sorry, we cannot offer you the job at this time". If the salary is less than $50,000 and the years of experience are between 5 and 10 (inclusive), print "We can offer you the job at a lower salary". If the salary is greater than or equal to $50,000 or the years of experience are greater than or equal to 10, print "We can offer you the job at the requested salary".
 
 // 12. Write a program that asks the user to enter their score on a test. If the score is less than 60, print "You failed the test". If the score is between 60 and 70 (inclusive), print "You passed the test, but your grade is not great". If the score is between 71 and 80 (inclusive), print "You got a B". If the score is between 81 and 90 (inclusive), print "You got an A". If the score is greater than 90, print "You got an A+ - Great job!".
