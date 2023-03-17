@@ -97,6 +97,31 @@ election2(14);
 
 // 12. Write a program that asks the user to enter their score on a test. If the score is less than 60, print "You failed the test". If the score is between 60 and 70 (inclusive), print "You passed the test, but your grade is not great". If the score is between 71 and 80 (inclusive), print "You got a B". If the score is between 81 and 90 (inclusive), print "You got an A". If the score is greater than 90, print "You got an A+ - Great job!".
 
+let testScore = Number(prompt("Enter your test score: "))
+
+if (testScore < 60 && testScore >= 0) {
+  console.log("You failed the test")
+}
+else if (testScore <= 70 && testScore >= 60) {
+  console.log("You passed the test, but your grade is not great")
+}
+
+
+else if (testScore > 70 && testScore <= 80) {
+  console.log("You got a B")
+}
+
+else if (testScore <= 90 && testScore > 80) {
+  console.log("You got an A")
+}
+
+else if (testScore > 90) {
+  console.log("You got an A+ - Great job!")
+}
+
+
+
+
 
 // 13. Write a program that asks the user to enter a month number (1-12) and displays the corresponding season name. Use a switch statement to handle the different cases.
 
