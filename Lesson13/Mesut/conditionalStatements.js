@@ -15,7 +15,7 @@
 // //       console.log(number, 'is Odd');
 // //     }
 // //   }
-  
+
 // // }
 
 // function checkNumber(number) {
@@ -80,16 +80,16 @@
 
 //   if (sayi2 < sayi1) {
 //     console.log("ilk sayı ikincisinden küçüktür")
-    
+
 //   } else if(sayi2 > sayi1){
 //     console.log("ikinci sayı ilk sayıdan küçüktür")
-    
+
 //   }
 
 //   else{
 //     console.log("iki sayı birbirine eşittir")
 //   }
-  
+
 
 
 
@@ -106,12 +106,12 @@
 
 //   if (checkNumber > 0) {
 //     console.log("The number is positive")
-    
+
 //   }
 
 //   else if (checkNumber < 0) {
 //     console.log("The number is negative")
-    
+
 //   }
 
 //   else{
@@ -139,6 +139,17 @@
 
 // 8. Write a program that takes in a person's height and weight and checks if they are considered underweight, normal, overweight, or obese using if else statement.
 
+
+
+
+// Body Mass Index (BMI) is a person’s weight in kilograms (or pounds) divided by the square of height in meters (or feet). A high BMI can indicate high body fatness. 
+//Formula: weight (kg) / [height (m)]2
+// Below 18.5	Underweight
+// 18.5 – 24.9	Healthy Weight
+// 25.0 – 29.9	Overweight
+// 30.0 and Above	Obesity
+
+
 // let weight = Number(prompt("Please submit your weight in kilogram(like: 70)"))
 // let height = Number(prompt("Please submit your height in meter( like: 1.75 )"))
 
@@ -165,14 +176,6 @@
 // }
 
 
-
-// Body Mass Index (BMI) is a person’s weight in kilograms (or pounds) divided by the square of height in meters (or feet). A high BMI can indicate high body fatness. 
-//Formula: weight (kg) / [height (m)]2
-// Below 18.5	Underweight
-// 18.5 – 24.9	Healthy Weight
-// 25.0 – 29.9	Overweight
-// 30.0 and Above	Obesity
-
 // 9. Write a program that takes in a person's age and checks if they are a child (age 0-12), teenager (age 13-19), adult (age 20-64), or senior citizen (age 65 and above) using if else statement.
 
 
@@ -185,7 +188,7 @@
 // console.log("you are a child")  
 // } else if(personsAge >12 && personsAge <= 19){
 //   console.log("you are a teenager")
-  
+
 // }
 
 // else if(personsAge >9 && personsAge <= 64){
@@ -219,7 +222,55 @@
 
 // 11. Write a program that asks the user to enter their salary and their years of experience. If the salary is less than $30,000 and the years of experience are less than 5, print "Sorry, we cannot offer you the job at this time". If the salary is less than $50,000 and the years of experience are between 5 and 10 (inclusive), print "We can offer you the job at a lower salary". If the salary is greater than or equal to $50,000 or the years of experience are greater than or equal to 10, print "We can offer you the job at the requested salary".
 
+
+// let salary = Number(prompt("Enter your salary"))
+// let experience = Number(prompt("Enter your years of experience"))
+
+// if(salary<30000 && salary >0 && experience<5 && experience > 0){
+//  console.log("Sorry, we cannot offer you the job at this time")
+// }
+
+// else if(salary<50000 && experience>=5 && experience <=10){
+//   console.log("We can offer you the job at a lower salary")
+
+// }
+
+// else if(salary>=50000 || experience>10){
+//   console.log("We can offer you the job at the requested salary")
+// }
+
+// else if(salary <=0 || experience <= 0){
+//   console.log("please check your answers ")
+// }
+
+
+
 // 12. Write a program that asks the user to enter their score on a test. If the score is less than 60, print "You failed the test". If the score is between 60 and 70 (inclusive), print "You passed the test, but your grade is not great". If the score is between 71 and 80 (inclusive), print "You got a B". If the score is between 81 and 90 (inclusive), print "You got an A". If the score is greater than 90, print "You got an A+ - Great job!".
+
+let testScore = Number(prompt("Enter your test score: "))
+
+if (testScore < 60 && testScore >= 0) {
+  console.log("You failed the test")
+}
+else if (testScore <= 70 && testScore >= 60) {
+  console.log("You passed the test, but your grade is not great")
+}
+
+
+else if (testScore > 70 && testScore <= 80) {
+  console.log("You got a B")
+}
+
+else if (testScore <= 90 && testScore > 80) {
+  console.log("You got an A")
+}
+
+else if (testScore > 90) {
+  console.log("You got an A+ - Great job!")
+}
+
+
+
 
 
 // 13. Write a program that asks the user to enter a month number (1-12) and displays the corresponding season name. Use a switch statement to handle the different cases.
