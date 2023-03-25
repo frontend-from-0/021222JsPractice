@@ -99,6 +99,21 @@
 
 // 4. Write a program that takes in a string and checks if the first letter is uppercase using if else statement.
 
+
+// let string = prompt("kelimeyi giriniz");
+
+// let bigString = string.toUpperCase();
+
+// if (string[0]===bigString[0]) {
+//   console.log("ilk harf büyük")
+
+// } else {
+//   console.log("ilk harf küçük")
+
+// }
+
+
+
 // 5. Write a program that takes in a number and checks if it's positive, negative, or zero using if else statement.
 
 // let checkNumber = Number(prompt("Please enter a number:"))
@@ -121,8 +136,31 @@
 
 
 
-
+/******************************************************************************************/
 // 6. Write a program that takes in a year and checks if it's a leap year or not using if else statement.
+
+// let year = Number(prompt("enter the year:"))
+
+// if (year % 4 != 0) {
+//   console.log(year + " is not a leap year")
+// } 
+//   else{
+//     if (year%100 = 0){
+//       console.log(year + " is not leap year")
+
+//       else{
+//         if(year%400 != 0){
+//           console.log(year + " is not leap year")
+//         }
+//         else{
+//           console.log(year + " is leap year")
+//         }
+
+//       }
+//     }
+//   }
+
+
 
 // 7. Write a program that takes in a temperature and checks if it's above or below freezing using if else statement.
 
@@ -142,7 +180,7 @@
 
 
 
-// Body Mass Index (BMI) is a person’s weight in kilograms (or pounds) divided by the square of height in meters (or feet). A high BMI can indicate high body fatness. 
+// Body Mass Index (BMI) is a person’s weight in kilograms (or pounds) divided by the square of height in meters (or feet). A high BMI can indicate high body fatness.
 //Formula: weight (kg) / [height (m)]2
 // Below 18.5	Underweight
 // 18.5 – 24.9	Healthy Weight
@@ -185,7 +223,7 @@
 //   console.log("you do not even born")
 // }
 // else if (personsAge >=0 && personsAge <= 12 ) {
-// console.log("you are a child")  
+// console.log("you are a child")
 // } else if(personsAge >12 && personsAge <= 19){
 //   console.log("you are a teenager")
 
@@ -316,5 +354,13 @@
 
 
 // 14. Write a program that asks the user to enter a grade letter (A, B, C, D, or F) and displays a message indicating whether the grade is passing (A, B, C) or failing (D, F). Use a switch statement to handle the different cases.
+
+let gradeLetter = prompt("please enter your grade letter")
+
+let bigGradeletter = gradeLetter.toUpperCase()
+
+
+
+
 
 // 15. Write a program that asks the user to enter their age, and then calculates and displays their age in dog years (where one human year is equivalent to seven dog years). If the user enters a negative number or zero, display an error message.
