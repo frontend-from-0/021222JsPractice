@@ -1,4 +1,4 @@
-// // 1. Write a program that takes in a number and checks if it's even or odd using if else statement.
+// 1. Write a program that takes in a number and checks if it's even or odd using if else statement.
 // // function checkNumber(number) {
 // //   if (typeof number === 'number') {
 // //     isEven();
@@ -313,43 +313,43 @@
 
 // 13. Write a program that asks the user to enter a month number (1-12) and displays the corresponding season name. Use a switch statement to handle the different cases.
 
-// function findSeasonName(month) {
-//     switch (month) {
-//     case 1:
-//     case 2:
-//     case 12:
-//         console.log(month, "Winter");
-//         break;
-//         // return "Winter";
-//     case 3:
-//     case 4:
-//     case 5:
-//         console.log(month, "Spring");
-//         break;
-//     case 6:
-//     case 7:
-//     case 8:
-//         console.log(month, "Summer");
-//         break;
+function findSeasonName(month) {
+  switch (month) {
+    case 1:
+    case 2:
+    case 12:
+      console.log(month, "Winter");
+      break;
+    // return "Winter";
+    case 3:
+    case 4:
+    case 5:
+      console.log(month, "Spring");
+      break;
+    case 6:
+    case 7:
+    case 8:
+      console.log(month, "Summer");
+      break;
 
-//     default:
-//           console.log(month, "Fall");
-//       break;
-//     }
+    default:
+      console.log(month, "Fall");
+      break;
+  }
 
-    // if (month == 1 || month == 2 || month == 12) {
-    //   console.log(month, "Winter");
-    // } else if (month == 1 || month == 2 || month == 12) {
-    //   console.log(month, "Spring");
-    // } else if (month == 1 || month == 2 || month == 12) {
-    //   console.log(month, "Summer");
-    // } else {
-    //   console.log(month, "Fall");
-    // }
-  // }
-  // findSeasonName(5);
-  // findSeasonName(1);
-  // findSeasonName(10);
+  if (month == 1 || month == 2 || month == 12) {
+    console.log(month, "Winter");
+  } else if (month == 1 || month == 2 || month == 12) {
+    console.log(month, "Spring");
+  } else if (month == 1 || month == 2 || month == 12) {
+    console.log(month, "Summer");
+  } else {
+    console.log(month, "Fall");
+  }
+}
+findSeasonName(5);
+findSeasonName(1);
+findSeasonName(10);
 
 
 
@@ -359,8 +359,33 @@ let gradeLetter = prompt("please enter your grade letter")
 
 let bigGradeletter = gradeLetter.toUpperCase()
 
+switch (bigGradeletter) {
+  case A:
+  case B:
+  case C:
+
+    break;
+
+  default:
+    break;
+}
+
+
+
+
 
 
 
 
 // 15. Write a program that asks the user to enter their age, and then calculates and displays their age in dog years (where one human year is equivalent to seven dog years). If the user enters a negative number or zero, display an error message.
+
+
+let humanYear = Number(prompt("please enter your age:"));
+let dogYear = 7*humanYear;
+
+if (humanYear>=0) {
+  console.log(dogYear)
+  
+} else {
+  console.log("error, time travel have not invented yet")
+}
