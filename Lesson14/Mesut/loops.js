@@ -1,36 +1,36 @@
 // 1. Write a loop that prints out the numbers from 1 to 10.
 
-for(let i=1; i<11; i++){
-    console.log(i)
-}
-
-console.log('- - - - - - - - - - - - - - - - - ');
-// 2. Write a loop that prints out the odd numbers from 1 to 20.
-// 1,3,5,7...
-for(let i=1; i<21; i+=2){
-    console.log(i)
-}
-
-console.log('- - - - - - - - - - - - - - - - - ');
-// 3. Write a loop that prints out the even numbers from 1 to 20.
-// 2, 4, 6...
-
-for (let i= 2; i<21; i +=2 ){
-    console.log(i)
-}
-
-console.log('- - - - - - - - - - - - - - - - - ');
-// 4. Write a loop that finds the maximum number in an array of numbers.
-
-// const findMaxNumberInArray = [3, 10, 23, 42, 55, 12, 7, 4, 90];
-// let maxNumberInArray= findMaxNumberInArray[0]
-
-// for(let i=0; i<findMaxNumberInArray.length; i++);
-
-// if (findMaxNumberInArray[i]> maxNumberInArray) {
-//     console.log();
-    
+// for(let i=1; i<11; i++){
+//     console.log(i)
 // }
+
+// console.log('- - - - - - - - - - - - - - - - - ');
+// // 2. Write a loop that prints out the odd numbers from 1 to 20.
+// // 1,3,5,7...
+// for(let i=1; i<21; i+=2){
+//     console.log(i)
+// }
+
+// console.log('- - - - - - - - - - - - - - - - - ');
+// // 3. Write a loop that prints out the even numbers from 1 to 20.
+// // 2, 4, 6...
+
+// for (let i= 2; i<21; i +=2 ){
+//     console.log(i)
+// }
+
+// console.log('- - - - - - - - - - - - - - - - - ');
+// // 4. Write a loop that finds the maximum number in an array of numbers.
+
+// // const findMaxNumberInArray = [3, 10, 23, 42, 55, 12, 7, 4, 90];
+// // let maxNumberInArray= findMaxNumberInArray[0]
+
+// // for(let i=0; i<findMaxNumberInArray.length; i++);
+
+// // if (findMaxNumberInArray[i]> maxNumberInArray) {
+// //     console.log();
+    
+// // }
 
 
 
@@ -42,6 +42,16 @@ const findMinNumberInArray = [10, 1, 23, 42, 55, 12, 7, 4];
 console.log('- - - - - - - - - - - - - - - - - ');
 // 6. Write a loop that reverses a given string.
 const string = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.';
+let arr = string.split("");
+let reverseArr=[];
+let xet =[];
+
+for(i=arr.length-1;i=0;i--){
+let xet = reverseArr.push(arr[i])
+}
+console.log(arr);
+console.log(reverseArr);
+console.log(xet);
 
 console.log('- - - - - - - - - - - - - - - - - ');
 // 7. Write a while loop that counts from 10 to 1 and prints out each number.
