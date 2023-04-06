@@ -15,7 +15,7 @@
 //       console.log(number, 'is Odd');
 //     }
 //   }
-  
+  let yas=prompt("isminiz?");
 // }
 
 function checkNumber(number) {
