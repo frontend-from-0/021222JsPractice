@@ -1,3 +1,4 @@
+alert("Merve Bingül Software Developer");
 // Declare a variable x and initialize it to 5.
 // Declare a variable y and initialize it to 3.
 // Declare a variable z and initialize it to the sum of x and y.
