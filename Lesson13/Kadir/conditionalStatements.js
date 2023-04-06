@@ -75,6 +75,26 @@ election2(14);
 
 // 4. Write a program that takes in a string and checks if the first letter is uppercase using if else statement.
 
+let a=prompt("Input a funny string= ");
+
+function lettercase(Lett){
+  if (Lett===Lett.toUppercase()){
+    console.log("1st letter (",Lett,") is uppercase.");
+  } else {
+    console.log("1st letter (",Lett,") is lowercase.");
+  }
+}
+
+function lettercase(Lett){
+  if (string.fromCharcode(Lett[0])>= feff0041 && string.fromCharcode(Lett[0] <= feff005a)){
+    console.log("1st letter (",Lett[0],") is uppercase.");
+  } else {
+    console.log("1st letter (",Lett[0],") is lowercase.");
+  }
+}
+
+lettercase(a);
+
 // 5. Write a program that takes in a number and checks if it's positive, negative, or zero using if else statement.
 
 // 6. Write a program that takes in a year and checks if it's a leap year or not using if else statement.
