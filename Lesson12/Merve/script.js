@@ -1,4 +1,3 @@
-alert("Merve Bingül Software Developer");
 // Declare a variable x and initialize it to 5.
 // Declare a variable y and initialize it to 3.
 // Declare a variable z and initialize it to the sum of x and y.
@@ -98,19 +97,49 @@ console.log(dayInThePast.split(' ')[1]);
 // The reason the output is one hour behind what you might expect (i.e. January 1, 2000 at 00:00:00) is because of the timezone offset between your local timezone and UTC. The output indicates that your local timezone is one hour ahead of UTC. This is likely because your local timezone observes daylight saving time, which can cause the timezone offset to change depending on the time of year.
 
 // To get the date and time in your local timezone, you can use methods such as getDate(), getMonth(), and getFullYear() to extract the individual components of the date and time, and then construct a new Date object using those components. 
+
+// '1 Ocak 2000' gibi bir tarih ve saatin dize gösterimini kullanarak yeni bir Date nesnesi oluşturduğunuzda, ortaya çıkan tarih ve saat, kodun çalıştığı ortamın saat dilimine göre yorumlanır.
+
+// Bu durumda, gördüğünüz çıktı (1999-12-31T23:00:00.000Z), hesaplamada genellikle referans zaman olarak kullanılan UTC (Eşgüdümlü Evrensel Saat) biçimindedir. Dizenin sonundaki Z, zamanın UTC'de olduğunu gösterir.
+
+// Çıktının beklediğinizden bir saat geride olmasının nedeni (yani 1 Ocak 2000, 00:00:00), yerel saat diliminiz ile UTC arasındaki saat dilimi farkıdır. Çıktı, yerel saat diliminizin UTC'den bir saat ileride olduğunu gösterir. Bunun nedeni, yerel saat diliminizin yaz saatini gözlemlemesi ve bunun da saat dilimi farkının yılın zamanına göre değişmesine neden olabilmesidir.
+
+// Tarih ve saati yerel saat diliminizde almak için getDate(), getMonth() ve getFullYear() gibi yöntemleri kullanarak tarih ve saatin ayrı ayrı bileşenlerini ayıklayabilir ve ardından şunu kullanarak yeni bir Date nesnesi oluşturabilirsiniz. bu bileşenler.
+
 var dayInThePastDate = new Date(dayInThePast);
 console.log(dayInThePastDate);
 
 // ---
 // Declare a variable x and initialize it to 5. Use the prefix ++ operator to increment the value of x by 1, then log the new value to the console.
+let value5 = 5;
+value5 ++;
+console.log (value5);
+
 // ---
 // Declare a variable y and initialize it to 10. Use the postfix ++ operator to increment the value of y by 1, then log the original value of y to the console.
+let valueY = 10;
+valueY ++;
+console.log(valueY);
 // ---
 // (Declare a variable count and initialize it to 0. Use a loop to increment the value of count by 1 using the prefix ++ operator 10 times. Log the final value of count to the console.)
+for(i=0 ; i<=10 ; i++){
+   console.log(i);
+}
+
 // ---
 // Declare a variable num and initialize it to -3. Use the postfix ++ operator to increment the value of num by 1, then multiply the result by 2 and log it to the console.
+let num6 = -3;
+num6 ++;
+let num7 = (num6 * 2);
+console.log(num7);
 // ---
 // Declare two variables a and b and initialize them to 2 and 3, respectively. Use the prefix ++ operator to increment the value of a by 1, then add b to the result and log it to the console.
+let a = 2;
+let b = 3;
+a++;
+let c = a + b;
+console.log(c);
+
 
 //BONUS: generate random number in a range from 0 to 10
 //Math.random()
