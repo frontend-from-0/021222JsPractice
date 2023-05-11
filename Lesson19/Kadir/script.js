@@ -39,10 +39,13 @@ const firstParagraph = document.getElementById('first-paragraph');
 
 // 4. Remove the second image from the page.
 const images = document.body.querySelectorAll('img');
-console.log(images);
+// console.log(images);
 images[1].remove();
 
 // 5. Add a border to all images on the page (2px solid #272932).
+const imagesAll = document.querySelectorAll('img');
+imagesAll.style.borderStyle = "2px solid #272932";
+
 // 6. Change the text of the first heading on the page to "Welcome to my Website".
 // 7. Replace the first image on the page with a new image ("https://picsum.photos/400/200").
 // 8. Remove the first list item from the unordered list.
