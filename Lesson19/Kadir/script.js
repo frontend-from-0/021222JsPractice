@@ -18,8 +18,20 @@
 	myImage.setAttribute('width', '500');
 
 */
+
+//"Fixing Document is not defined in NodeJS"
+
+// if (typeof window !== "undefined") {
+//   console.log("In Browser");
+//   var x = document.getElementById("msg");
+//   console.log(x);
+// }
+// else {
+//   console.log("In nodeJS");
+// }
+
 // 1. Change the text color of all paragraphs on the page to #272932.
-var paragraphs = document.querySelectorAll('p');
+const paragraphs = document.querySelectorAll('p');
 console.log('Excercise 1', paragraphs);
 for (var i = 0; i < paragraphs.length; i++) {
   paragraphs[i].style.color = 'red';
@@ -39,14 +51,18 @@ const firstParagraph = document.getElementById('first-paragraph');
 
 // 4. Remove the second image from the page.
 const images = document.body.querySelectorAll('img');
-// console.log(images);
+console.log(images);
 images[1].remove();
 
 // 5. Add a border to all images on the page (2px solid #272932).
-const imagesAll = document.querySelectorAll('img');
-imagesAll.style.borderStyle = "2px solid #272932";
+console.log(images);
+images.style.borderStyle = "2px solid #272932";
 
 // 6. Change the text of the first heading on the page to "Welcome to my Website".
+const headingReplace = document.body.getElementByTag('h1');
+console.log(headingReplace);
+headingReplace.replace() = "Welcome to my Website";
+
 // 7. Replace the first image on the page with a new image ("https://picsum.photos/400/200").
 // 8. Remove the first list item from the unordered list.
 // 9. Append a new list item to the end of the ordered list with the text "Last Item".
