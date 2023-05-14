@@ -15,19 +15,45 @@ form.addEventListener('submit', (event) => {
   const removeButton = document.createElement("button");
   removeButton.innerText = 'X';
   // TODO: Update styles of removeButton! (use button--light class)
-  listItemElement.appendChild(removeButton);
+  
+
 
   list.appendChild(listItemElement);
 
   // Add a listener to the task item to toggle its completed status
   listItemElement.addEventListener('click',() => {
     // TODO: "completed" class is applied both to the text of the item and the button. Refactor the content of li element so that the class is only applied to the text but not to the button!
+
+
+    // listItemElement.classList.toggle("completed");
+    // var a = document.listItemElement.value
+  //  input.value.classList.toggle("completed");
+    // listItemElement.parentNode.classList.remove(removeButton);
+    // removeButton.classList.deactivateClass(completed);
+
     listItemElement.classList.toggle("completed");
+
   });
+  
+  // removeButton.removeAttribute('text-decoration');
+  // removeButton.classList.deactivateClass(completed);
+  // removeButton.classList.remove("completed");
+
+  // removeButton.style.removeProperty("textDecoration");
+  removeButton.style.textDecoration='none';
+  removeButton.classList.add("button--light");
+  
+ 
+
+  removeButton.addEventListener("mouseover",()=>{
+    removeButton.classList.add("button--light:hover");
+  });
+
   removeButton.addEventListener("click",()=>{
     list.removeChild(listItemElement);
   });
   
+  listItemElement.appendChild(removeButton);
   
   // Clear the input field
 input.value = "";
