@@ -43,11 +43,33 @@ console.log(images);
 images[1].remove();
 
 // 5. Add a border to all images on the page (2px solid #272932).
+const imagesAll = document.querySelectorAll('img')
+for (i = 0; i < imagesAll.length; i++) {
+imagesAll[i].style.border = '2px solid #272932';
+}
+
 // 6. Change the text of the first heading on the page to "Welcome to my Website".
+const newFirstHeading = document.querySelector('h1');
+newFirstHeading.innerHTML = "Welcome to my Website";
+
 // 7. Replace the first image on the page with a new image ("https://picsum.photos/400/200").
+const firstImage = document.querySelector('img');
+firstImage.src = "https://picsum.photos/400/200";
+
 // 8. Remove the first list item from the unordered list.
+const firstLiItem = document.querySelector('ul');
+firstLiItem.remove();
+
 // 9. Append a new list item to the end of the ordered list with the text "Last Item".
+const ol = document.createElement('ol');
+const li = document.createElement('li');
+ol.append(li);
+li.innerText = 'Last Item';
+
 // 10. Add a button (in html) with "Hide images" text. When a button is clicked, change the text of the button to "Show images" and hide all the images on the web page (set display to none).
-
-
+const myBtn = document.getElementById('myBtn');
+myBtn.addEventListener("click", hideImages);
+function hideImages() {
+	document.getElementByTagName('img').style.display = 'none';
+}
 
