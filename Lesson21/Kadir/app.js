@@ -31,8 +31,8 @@ window.addEventListener('load',function(){
     // Use loop to loop through all element of array
     // Add active class to the current image and indicator
     // images[]
-
-    // images.forEach(rearrangeActive);
+    console.log(index);
+    images.forEach(rearrangeActive);
   }
 
   // handle next click
@@ -58,6 +58,7 @@ window.addEventListener('load',function(){
     return currentIndex;
     // if else condition
   }
+  console.log(currentIndex);
 
   // Add event listeneters for button clicks
   previousButton.addEventListener("click", showPrevImage);
