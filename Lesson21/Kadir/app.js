@@ -60,8 +60,8 @@ window.addEventListener('load',function(){
   }
 
   // Add event listeneters for button clicks
-  previousButton.addEventListener("click", showPrevImage());
-  nextButton.addEventListener("click", showNextImage());
+  previousButton.addEventListener("click", showPrevImage);
+  nextButton.addEventListener("click", showNextImage);
 
   // Switch images after 3 seconds automatically using setInterval function
   // Use 3000 value for 3 second delay
