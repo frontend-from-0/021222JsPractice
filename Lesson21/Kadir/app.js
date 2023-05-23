@@ -15,7 +15,7 @@ window.addEventListener('load',function(){
   let currentIndex = 0;
 
   // Show images function
-  function showImage(currentIndex) {
+  function showImage(index) {
     // Remove active class from all images
         images.forEach(element => {
           element.classList.remove("active");
@@ -29,17 +29,17 @@ window.addEventListener('load',function(){
           indicators[0].classList.remove("active");
         }
 
-      images[currentIndex].classList.add("active");
-      indicators[currentIndex].classList.add("active");
+      images[index].classList.add("active");
+      indicators[index].classList.add("active");
 
-      images[currentIndex].classList.toggle("visible");
+      images[index].classList.toggle("visible");
     // For every element in images array call a function that removes "active" class
 
     // Remove active class from all indicators
     // Use loop to loop through all element of array
     // Add active class to the current image and indicator
     // images[]
-    console.log(currentIndex);
+    console.log(index);
     
   }
 
@@ -74,5 +74,5 @@ window.addEventListener('load',function(){
 
   // Switch images after 3 seconds automatically using setInterval function
   // Use 3000 value for 3 second delay
-  setInterval(showImage(), 3000);
+  setInterval(showNextImage(currentIndex), 3000);
 });
