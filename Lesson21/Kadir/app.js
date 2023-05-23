@@ -44,6 +44,11 @@ window.addEventListener('load',function(){
   function showPrevImage() {
     // [image1, image2, image3]
     // decrease currentIndex. What happens if the current index is < 0?
+    currentIndex--;
+    if (currentIndex<0){
+    currentIndex=2;
+    showImage(currentIndex);
+    }
     // if else condition
   }
 
