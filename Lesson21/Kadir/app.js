@@ -15,7 +15,7 @@ window.addEventListener('load',function(){
   let currentIndex = 0;
 
   // Show images function
-  function showImage(currentIndex) {
+  function showImage(currentIndex="0") {
     // Remove active class from all images
         images.forEach(element => {
           element.classList.remove("active");
@@ -29,10 +29,10 @@ window.addEventListener('load',function(){
           indicators[0].classList.remove("active");
         }
 
-      images[currentIndex ].classList.add("active");
-      indicators[currentIndex ].classList.add("active");
+      images[currentIndex].classList.add("active");
+      indicators[currentIndex].classList.add("active");
 
-      images[currentIndex ].classList.toggle("visible");
+      images[currentIndex].classList.toggle("visible");
     // For every element in images array call a function that removes "active" class
 
     // Remove active class from all indicators
