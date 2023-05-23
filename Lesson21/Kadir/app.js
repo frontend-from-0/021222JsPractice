@@ -15,7 +15,7 @@ window.addEventListener('load',function(){
   let currentIndex = 0;
 
   // Show images function
-  function showImage(currentIndex="0") {
+  function showImage(currentIndex) {
     // Remove active class from all images
         images.forEach(element => {
           element.classList.remove("active");
