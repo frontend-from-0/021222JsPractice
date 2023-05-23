@@ -17,14 +17,14 @@ window.addEventListener('load',function(){
   // Show images function
   function showImage(index) {
     // Remove active class from all images
-    
+    images.forEach(rearrangeActive);
     function rearrangeActive() {
         images.classList.remove("active");
         indicators.classList.remove("active");
 
         images[index].classList.add("active");
         indicators[index].classList.add("active");
-      }
+      };
     // For every element in images array call a function that removes "active" class
 
     // Remove active class from all indicators
@@ -32,7 +32,7 @@ window.addEventListener('load',function(){
     // Add active class to the current image and indicator
     // images[]
     console.log(index);
-    images.forEach(rearrangeActive);
+    
   }
 
   // handle next click
@@ -66,5 +66,5 @@ window.addEventListener('load',function(){
 
   // Switch images after 3 seconds automatically using setInterval function
   // Use 3000 value for 3 second delay
-  setInterval(showNextImage(), 30000);
+  setInterval(showNextImage(), 3000);
 });
