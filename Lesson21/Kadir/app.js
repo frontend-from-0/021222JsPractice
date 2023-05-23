@@ -24,9 +24,11 @@ window.addEventListener('load',function(){
         indicators.forEach(element => {
           element.classList.remove("active");
         });
-        
+
       images[currentIndex ].classList.add("active");
       indicators[currentIndex ].classList.add("active");
+
+      images[currentIndex ].classList.toggle("visible");
     // For every element in images array call a function that removes "active" class
 
     // Remove active class from all indicators
