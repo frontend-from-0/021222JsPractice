@@ -21,9 +21,13 @@ window.addEventListener('load',function(){
           element.classList.remove("active");
         });
 
-        indicators.forEach(element => {
-          element.classList.remove("active");
-        });
+        // indicators.forEach(el => {
+        //   el.classList.remove("active");
+        // });
+
+        while(indicators.length>0){
+          indicators[0].classList.remove("active");
+        }
 
       images[currentIndex ].classList.add("active");
       indicators[currentIndex ].classList.add("active");
