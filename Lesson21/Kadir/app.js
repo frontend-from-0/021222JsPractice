@@ -18,22 +18,21 @@ window.addEventListener('load',function(){
   function showImage(index) {
     // Remove active class from all images
     
-    function removeActive() {
+    function rearrangeActive() {
         images.classList.remove("active");
         indicators.classList.remove("active");
+
+        images[index].classList.add("active");
+        indicators[index].classList.add("active");
       }
     // For every element in images array call a function that removes "active" class
 
     // Remove active class from all indicators
     // Use loop to loop through all element of array
-    if (index >= 0 && index < images.length) {
     // Add active class to the current image and indicator
     // images[]
-    images[index].classList.add("active");
-    indicators[index].classList.add("active");
-    }
 
-    images.forEach(removeActive);
+    // images.forEach(rearrangeActive);
   }
 
   // handle next click
