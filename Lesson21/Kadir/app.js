@@ -37,7 +37,11 @@ window.addEventListener('load',function(){
   function showNextImage() {
     // increase currentIndex. What happens if the current index is > than number of images that we have?
     currentIndex++;
+    if (currentIndex>2){
+      currentIndex=0;
+    };
     showImage(currentIndex);
+    return currentIndex;
   }
 
   // handle previous click
@@ -46,16 +50,18 @@ window.addEventListener('load',function(){
     // decrease currentIndex. What happens if the current index is < 0?
     currentIndex--;
     if (currentIndex<0){
-    currentIndex=2;
+      currentIndex=2;
+    };
     showImage(currentIndex);
-    }
+    return currentIndex;
     // if else condition
   }
 
   // Add event listeneters for button clicks
-
+  previousButton.addEventListener("click", showPrevImage());
+  nextButton.addEventListener("click", showNextImage());
 
   // Switch images after 3 seconds automatically using setInterval function
   // Use 3000 value for 3 second delay
-
+  setInterval(showNextImage(), 30000);
 });
