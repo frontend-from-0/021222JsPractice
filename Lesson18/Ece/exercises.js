@@ -8,7 +8,6 @@ class Person {
   get name() {
     return this._name;
   }
-
   greet() {
     console.log(
       "Hello, my name is  " +
@@ -24,8 +23,59 @@ class Person {
 
 const ece = new Person("Ece", 31, "female");
 ece.greet();
-// 2. Create a Shape class with name and color properties, and a describe() method that logs a description of the shape to the console (e.g. "This is a blue square"). Then create a Square class that extends the Shape class and adds sideLength and area properties. Override the describe() method in the Square class to log a description of the square to the console (e.g. "This is a blue square with a side length of 5 and an area of 25").
 
+/* 2. Create a Shape class with name and color properties, and 
+a describe() method that logs a description of the shape to the console(e.g. "This is a blue square").
+Then create a Square class that extends the Shape class and adds sideLength and area properties.
+Override the describe() method in the Square class to log a description of the square to the console
+(e.g. "This is a blue square with a side length of 5 and an area of 25").*/
+
+class Shape {
+  constructor(name, color) {
+    this._name = name;
+    this._color = color;
+  }
+  describe(name, color) {
+    console.log("This is a " + this._color + " " + this._name + ".");
+  }
+}
+class Square extends Shape {
+  constructor(name, color, sideLength, area) {
+    super();
+    this._name = name;
+    this._color = color;
+    this._sideLength = sideLength;
+    this._area = area;
+  }
+  get sideLength() {
+    return this._sideLength;
+  }
+  get area() {
+    return this._area;
+  }
+  get name() {
+    return this._name;
+  }
+  get color() {
+    return this._color;
+  }
+
+  describe(name, color, sideLength, area) {
+    console.log(
+      "This is a " +
+        this._color +
+        " " +
+        this._name +
+        " with a side length of " +
+        this._sideLength +
+        " and an area of " +
+        this._area +
+        " ."
+    );
+  }
+}
+const square = new Square("Square", "red", 4, 16);
+square.describe();
 // 3. Create a Vehicle class with make, model, and year properties, and a start() method that logs a message to the console indicating that the vehicle has started. Then create a Car class that extends the Vehicle class and adds a numDoors property. Override the start() method in the Car class to log a different message to the console indicating that the car has started.
 
 // 4. Create a BankAccount class with balance and interestRate properties, and deposit() and withdraw() methods. Add a transactionHistory property that is an array of objects representing each transaction made on the account, with properties for type (either "deposit" or "withdrawal"), amount, and date ({type: "withdrawal", amount: amount, date: new Date().toLocaleDateString()}). Implement deposit() and withdraw() methods that add new transactions to the transactionHistory array. Implement a get transactionHistory() getter method that returns a copy of the transaction history array, and a get currentBalance() getter method that calculates and returns the current balance of the account based on the transaction history.
