@@ -76,6 +76,33 @@ class Square extends Shape {
 }
 const square = new Square("Square", "red", 4, 16);
 square.describe();
-// 3. Create a Vehicle class with make, model, and year properties, and a start() method that logs a message to the console indicating that the vehicle has started. Then create a Car class that extends the Vehicle class and adds a numDoors property. Override the start() method in the Car class to log a different message to the console indicating that the car has started.
-
+/* 3. Create a Vehicle class with make, model, and year properties, and 
+a start() method that logs a message to the console indicating that the vehicle has started. 
+Then create a Car class that extends the Vehicle class and adds a numDoors property. 
+Override the start() method in the Car class 
+to log a different message to the console indicating that the car has started.*/
+class Vehicle {
+  constructor(make, model, year) {
+    this._make = make;
+    this._model = model;
+    this._year = year;
+  }
+  start() {
+    console.log("The vehicle has started.");
+  }
+}
+class Car extends Vehicle {
+  constructor(numDoors) {
+    super();
+    this._numDoors = numDoors;
+  }
+  get numDoors() {
+    return this._numDoors;
+  }
+  start() {
+    console.log("The vehicle with " + this._numDoors + " doors has started.");
+  }
+}
+const car = new Car(4);
+car.start();
 // 4. Create a BankAccount class with balance and interestRate properties, and deposit() and withdraw() methods. Add a transactionHistory property that is an array of objects representing each transaction made on the account, with properties for type (either "deposit" or "withdrawal"), amount, and date ({type: "withdrawal", amount: amount, date: new Date().toLocaleDateString()}). Implement deposit() and withdraw() methods that add new transactions to the transactionHistory array. Implement a get transactionHistory() getter method that returns a copy of the transaction history array, and a get currentBalance() getter method that calculates and returns the current balance of the account based on the transaction history.
