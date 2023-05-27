@@ -105,4 +105,58 @@ class Car extends Vehicle {
 }
 const car = new Car(4);
 car.start();
-// 4. Create a BankAccount class with balance and interestRate properties, and deposit() and withdraw() methods. Add a transactionHistory property that is an array of objects representing each transaction made on the account, with properties for type (either "deposit" or "withdrawal"), amount, and date ({type: "withdrawal", amount: amount, date: new Date().toLocaleDateString()}). Implement deposit() and withdraw() methods that add new transactions to the transactionHistory array. Implement a get transactionHistory() getter method that returns a copy of the transaction history array, and a get currentBalance() getter method that calculates and returns the current balance of the account based on the transaction history.
+/* 4. Create a BankAccount class with balance and interestRate properties, 
+and deposit() and withdraw() methods. 
+Add a transactionHistory property that is an array of objects representing each transaction made on the account, 
+with properties for type (either "deposit" or "withdrawal"), amount, and date 
+({type: "withdrawal", amount: amount, date: new Date().toLocaleDateString()}). 
+Implement deposit() and withdraw() methods that add new transactions to the transactionHistory array. 
+Implement a get transactionHistory() getter method that 
+returns a copy of the transaction history array, and a get currentBalance() getter method 
+that calculates and returns the current balance of the account based on the transaction history.*/
+class BankAccount {
+  constructor(balance, intrestRate, transactionHistory, amount) {
+    this._balance = balance;
+    this._intrestate = intrestRate;
+    transactionHistory = {
+      type: "withdrawal",
+      amount: amount,
+      date: new Date().toLocaleDateString(),
+    };
+    this._transactionHistoy = transactionHistory;
+  }
+  deposit(depositedAmount, amount, transactionHistory) {
+    transactionHistory = amount;
+    currentBalance = amount + depositedAmount;
+    console.log(
+      "Money deposited to the account is " +
+        depositedAmount +
+        " USD" +
+        " and total balance is " +
+        currentBalance +
+        " USD"
+    );
+  }
+  withdraw(withdrawnAmount, amount, transactionHistory) {
+    transactionHistory = -amount;
+    currentBalance = amount - withdrawnAmount;
+    console.log(
+      "Money withdrawn from the account is " +
+        withdrawnAmount +
+        " USD" +
+        " and total balance is " +
+        currentBalance +
+        " USD"
+    );
+    return transactionHistory;
+  }
+  get currentBalance() {
+    return currentBalance;
+  }
+  get transactionHistory() {
+    return transactionHistory;
+  }
+}
+const bankaccount = new BankAccount(100, 0, -50, 50);
+bankaccount.currentBalance();
+bankaccount.transactionHistory();
