@@ -47,6 +47,8 @@ const allImages = document.body.querySelectorAll("img");
 console.log("allImages");
 allImages.style.border = "2px solid #272932";
 // 6. Change the text of the first heading on the page to "Welcome to my Website".
+const firstHeading = document.getElementsByTagName("h1");
+firstHeading.textContent = "Welcome to my Website";
 // 7. Replace the first image on the page with a new image ("https://picsum.photos/400/200").
 // 8. Remove the first list item from the unordered list.
 // 9. Append a new list item to the end of the ordered list with the text "Last Item".
