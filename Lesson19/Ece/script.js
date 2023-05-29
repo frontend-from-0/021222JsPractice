@@ -59,5 +59,7 @@ firstImage.src = "https://picsum.photos/400/200";
 const listItems = document.body.querySelectorAll("li");
 console.log(listItems);
 listItems[1].remove();
+
 // 9. Append a new list item to the end of the ordered list with the text "Last Item".
+
 // 10. Add a button (in html) with "Hide images" text. When a button is clicked, change the text of the button to "Show images" and hide all the images on the web page (set display to none).
