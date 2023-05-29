@@ -61,5 +61,5 @@ window.addEventListener('load',function(){
   // Switch images after 3 seconds automatically using setInterval function
   // Use 3000 value for 3 second delay
   
-  let timer = setInterval(showNextImage, 3000);
+  setInterval(showNextImage, 3000);
 });
