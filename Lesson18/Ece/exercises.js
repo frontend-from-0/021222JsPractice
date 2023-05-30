@@ -120,20 +120,24 @@ class BankAccount {
     this._intrestate = intrestRate;
     this._transactionHistories = [];
   }
-  deposit(depositedAmount, amount, transactionHistories) {
-    this._transactionHistories = amount;
-    this._balance = amount + depositedAmount;
+  deposit(amount) {
+    this._transactionHistories.push({
+      type: "deposit",
+      amount: amount,
+      date: new Date().toLocaleDateString(),
+    });
+    this._balance = this._balance + amount;
     console.log(
       "Money deposited to the account is " +
-        depositedAmount +
+        amount +
         " USD" +
         " and total balance is " +
         this._balance +
         " USD"
     );
   }
-  withdraw(withdrawnAmount, amount, transactionHistory) {
-    transactionHistory = -amount;
+  withdraw(withdrawnAmount, amount, transactionHistories) {
+    transactionHistories = -amount;
     this._balance = amount - withdrawnAmount;
     console.log(
       "Money withdrawn from the account is " +
@@ -143,15 +147,17 @@ class BankAccount {
         this._balance +
         " USD"
     );
-    return transactionHistory;
+    return transactionHistories;
   }
   get currentBalance() {
     return this._balance;
   }
-  get transactionHistory() {
-    return transactionHistory;
+  get transactionHistories() {
+    return this._transactionHistories;
   }
 }
-const bankaccount = new BankAccount(100, 0, -50, 50);
-console.log(bankaccount.currentBalance);
-bankaccount.transactionHistory();
+const bankAccount = new BankAccount(100, 0, -50, 50);
+console.log(bankAccount.currentBalance);
+bankAccount.deposit(20);
+console.log(bankAccount.currentBalance);
+console.log(bankAccount.transactionHistories);
