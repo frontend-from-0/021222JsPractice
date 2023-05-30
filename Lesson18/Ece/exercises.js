@@ -115,48 +115,43 @@ Implement a get transactionHistory() getter method that
 returns a copy of the transaction history array, and a get currentBalance() getter method 
 that calculates and returns the current balance of the account based on the transaction history.*/
 class BankAccount {
-  constructor(balance, intrestRate, transactionHistory, amount) {
+  constructor(balance, intrestRate) {
     this._balance = balance;
     this._intrestate = intrestRate;
-    transactionHistory = {
-      type: "withdrawal",
-      amount: amount,
-      date: new Date().toLocaleDateString(),
-    };
-    this._transactionHistoy = transactionHistory;
+    this._transactionHistories = [];
   }
-  deposit(depositedAmount, amount, transactionHistory) {
-    transactionHistory = amount;
-    currentBalance = amount + depositedAmount;
+  deposit(depositedAmount, amount, transactionHistories) {
+    this._transactionHistories = amount;
+    this._balance = amount + depositedAmount;
     console.log(
       "Money deposited to the account is " +
         depositedAmount +
         " USD" +
         " and total balance is " +
-        currentBalance +
+        this._balance +
         " USD"
     );
   }
   withdraw(withdrawnAmount, amount, transactionHistory) {
     transactionHistory = -amount;
-    currentBalance = amount - withdrawnAmount;
+    this._balance = amount - withdrawnAmount;
     console.log(
       "Money withdrawn from the account is " +
         withdrawnAmount +
         " USD" +
         " and total balance is " +
-        currentBalance +
+        this._balance +
         " USD"
     );
     return transactionHistory;
   }
   get currentBalance() {
-    return currentBalance;
+    return this._balance;
   }
   get transactionHistory() {
     return transactionHistory;
   }
 }
 const bankaccount = new BankAccount(100, 0, -50, 50);
-bankaccount.currentBalance();
+console.log(bankaccount.currentBalance);
 bankaccount.transactionHistory();
