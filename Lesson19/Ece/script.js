@@ -61,5 +61,9 @@ console.log(listItems);
 listItems[1].remove();
 
 // 9. Append a new list item to the end of the ordered list with the text "Last Item".
+const newListItem = document.createElement("li");
+const newListItemText = document.createTextNode("Last Item");
+newListItem.appendChild(newListItemText);
+document.getElementById("ul").appendChild(newListItem);
 
 // 10. Add a button (in html) with "Hide images" text. When a button is clicked, change the text of the button to "Show images" and hide all the images on the web page (set display to none).
