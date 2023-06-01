@@ -66,4 +66,14 @@ const newListItemText = document.createTextNode("Last Item");
 newListItem.appendChild(newListItemText);
 document.getElementById("ul").appendChild(newListItem);
 
-// 10. Add a button (in html) with "Hide images" text. When a button is clicked, change the text of the button to "Show images" and hide all the images on the web page (set display to none).
+// 10. Add a button (in html) with "Hide images" text. When a button is clicked, 
+//change the text of the button to "Show images" and 
+//hide all the images on the web page(set display to none).
+const newButton = document.createElement("button");
+newButton.textContent = "Hide images";
+newButton.addEventListener("click", showImages);
+function showImages();
+{
+  document.getElementById("button").value = "Show images";
+  document.getElementById("img").style.display = "none";
+}
