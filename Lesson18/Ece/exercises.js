@@ -118,7 +118,11 @@ class BankAccount {
   constructor(balance, intrestRate) {
     this._balance = balance;
     this._intrestate = intrestRate;
-    this._transactionHistories = [];
+    this._transactionHistories = {
+      type: "withdrawal",
+      amount: amount,
+      date: new Date().toLocaleDateString(),
+    };
   }
   deposit(amount) {
     this._transactionHistories.push({
