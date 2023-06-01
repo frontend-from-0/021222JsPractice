@@ -115,7 +115,7 @@ Implement a get transactionHistory() getter method that
 returns a copy of the transaction history array, and a get currentBalance() getter method 
 that calculates and returns the current balance of the account based on the transaction history.*/
 class BankAccount {
-  constructor(balance, intrestRate) {
+  constructor(balance, intrestRate, amount) {
     this._balance = balance;
     this._intrestate = intrestRate;
     this._transactionHistories = {
