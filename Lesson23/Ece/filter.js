@@ -276,6 +276,7 @@ console.log(outOfStockItems);
 // Given an array of numbers, filter out the numbers that are divisible by 3.
 const numbersExercise7 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const nonDivisibleBy3 = numbersExercise7.filter((number) => number % 3 !== 0);
+console.log(nonDivisibleBy3);
 
 // Exercise 8:
 // Given an array of strings, filter out the strings that have more than 5 characters.
@@ -291,6 +292,10 @@ const wordsExercise8 = [
   "island",
   "jungle",
 ];
+const wordsLessThan5Chars = wordsExercise8.filter((word) => {
+  return word.length <= 5;
+});
+console.log(wordsLessThan5Chars);
 
 // Exercise 9:
 // Given an array of objects representing students, filter out the students who have a grade lower than C.
