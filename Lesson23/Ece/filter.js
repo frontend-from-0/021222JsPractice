@@ -362,9 +362,15 @@ const studentsExercise9 = [
   },
 ];
 const studentsWithGradesABC = studentsExercise9.filter(
-	(student) => {
-		student.grade =="C-"  || student.grade == "D" || student.grade == "D-" ||
-		student.grade == "D+"}
+  (student) =>
+    student.grade == "A-" ||
+    student.grade == "A" ||
+    student.grade == "B-" ||
+    student.grade == "A+" ||
+    student.grade == "B" ||
+    student.grade == "B+" ||
+    student.grade == "C+" ||
+    student.grade == "C"
 );
 console.log(studentsWithGradesABC);
 
@@ -432,5 +438,7 @@ const usersExercise10 = [
     email: "sophia@example.com",
   },
 ];
-const userDontStartWithJ = usersExercise10.filter((user) => { user.name.startsWith("J"); });
+const userDontStartWithJ = usersExercise10.filter((user) => {
+  user.name.startsWith("J");
+});
 console.log(userDontStartWithJ);
