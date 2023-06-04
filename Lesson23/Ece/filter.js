@@ -269,7 +269,7 @@ const productsExercise6 = [
   },
 ];
 
-const outOfStockItems = productsExercise6.filter((item) => item.quantity == 0);
+const outOfStockItems = productsExercise6.filter((item) => item.quantity !== 0);
 console.log(outOfStockItems);
 
 // Exercise 7:
