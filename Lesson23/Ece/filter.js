@@ -438,7 +438,7 @@ const usersExercise10 = [
     email: "sophia@example.com",
   },
 ];
-const userDontStartWithJ = usersExercise10.filter((user) => {
-  user.name.startsWith("J");
-});
+const userDontStartWithJ = usersExercise10.filter((user) =>
+  !user.name.startsWith("J")
+);
 console.log(userDontStartWithJ);
