@@ -361,6 +361,12 @@ const studentsExercise9 = [
     grade: "B-",
   },
 ];
+const studentsWithGradesABC = studentsExercise9.filter(
+	(student) => {
+		student.grade =="C-"  || student.grade == "D" || student.grade == "D-" ||
+		student.grade == "D+"}
+);
+console.log(studentsWithGradesABC);
 
 // Exercise 10:
 // Given an array of user objects, filter out the users who have a name starting with the letter "J".
