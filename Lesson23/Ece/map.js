@@ -297,7 +297,8 @@ const usersExercise8 = [
     email: "sophia@example.com",
   },
 ];
-
+const userEmails = usersExercise8.map((user) => user.email);
+console.log("Exercise8", userEmails);
 // Exercise 9:
 // Given an array of objects representing books, extract an array of book titles and authors using .map().
 const booksExercise9 = [
