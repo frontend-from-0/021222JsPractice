@@ -231,7 +231,8 @@ const sentencesExercise7 = [
   "The mountain peaks were covered in snow.",
   "The room was filled with laughter and joy.",
 ];
-
+const words = sentencesExercise7.map((sentence) => sentence.split(" "));
+console.log("Exercise 7", words);
 // Exercise 8:
 // Given an array of user objects, extract an array of their email addresses using .map().
 const usersExercise8 = [
