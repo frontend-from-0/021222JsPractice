@@ -105,13 +105,10 @@ console.log('- - - - - - - - - - - - - - - - - ');
 // 10. Write a for...in loop that prints out the keys and values of an object.
 let person = {name: "John", surname: "Doe", age: 30, city: "New York"};
 
-let man="";
 
-for(i in person){
-    man+=person[i]+" ";
+for (let i in person) {
+  console.log(i + ": " + person[i]);
 }
-
-console.log(man);
 
 console.log('- - - - - - - - - - - - - - - - - ');
 // 11. Write a for...in loop that sums the values of an object.
@@ -119,8 +116,9 @@ let obj = {a: 10, b: 20, c: 30};
 
 let sum=0;
 
-for(i in obj){
-    sum+=obj[i];
+for(let i in obj){
+    if (typeof obj[i] === 'number') {
+        sum += obj[i];
+    }
 }
-
 console.log(sum);
