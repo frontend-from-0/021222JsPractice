@@ -57,7 +57,7 @@ function election(age){
     }
 }
 
-election(17);
+election(currentAge);
 
 
 // function election2(age) {
@@ -79,90 +79,90 @@ election(17);
 
 // 3. Write a program that asks the user to enter two numbers and checks if the first number is greater than, less than, or equal to the second number using if else statement.
 
-let a=parseInt(prompt("Input 1st number="));
-let b=parseInt(prompt("Input 1st number="));
+let a=parseInt(prompt("Input 1st number:"));
+let b=parseInt(prompt("Input 1st number:"));
 
-function comparison(num1, num2){
+function compareTwoNumbers(num1, num2){
   if (num1>num2){
-    console.log("1st number (",num1,") is greater than 2nd number(",num2,")");
+    console.log("1st number (" + num1 + ") is greater than 2nd number(" + num2 + ")");
   } else if (num1<num2){
-    console.log("1st number (",num1,") is less than 2nd number(",num2,")");
+    console.log("1st number (" + num1 + ") is less than 2nd number(" + num2 + ")");
   } else {
-    console.log("1st number (",num1,") is equal to 2nd number(",num2,")");
+    console.log("1st number (" + num1 + ") is equal to 2nd number(" + num2 + ")");
   }
 }
 
-comparison(a,b);
+compareTwoNumbers(a,b);
 
 
 // 4. Write a program that takes in a string and checks if the first letter is uppercase using if else statement.
 
-// let a=prompt("Input a funny string= ");
+let funString =prompt("Input a funny string: ");
 
-// function lettercase(Lett){
-//   if (Lett===Lett.toUppercase()){
-//     console.log("1st letter (",Lett,") is uppercase.");
-//   } else {
-//     console.log("1st letter (",Lett,") is lowercase.");
-//   }
-// }
+function lettercase(Lett){
+  if (Lett===Lett.toUppercase()){
+    console.log("1st letter ("+Lett+") is uppercase.");
+  } else {
+    console.log("1st letter ("+Lett+") is lowercase.");
+  }
+}
 
 // function lettercase(Lett){
 //   if (string.fromCharcode(Lett[0])>= feff0041 && string.fromCharcode(Lett[0] <= feff005a)){
-//     console.log("1st letter (",Lett[0],") is uppercase.");
+//     console.log("1st letter ("+Lett[0]+") is uppercase.");
 //   } else {
-//     console.log("1st letter (",Lett[0],") is lowercase.");
+//     console.log("1st letter ("+Lett[0]+") is lowercase.");
 //   }
 // }
 
-// lettercase(a);
+lettercase(funString);
 
 
 // 5. Write a program that takes in a number and checks if it's positive, negative, or zero using if else statement.
 
-function sign(num){
+function checkNumber(num){
 
   if (num==0){
     console.log(num ," is zero");
-  } else if (Math.sign(num)==1){
+  } else if (Math.checkNumber(num)==1){
     console.log(num ," is positive.");
   } else
     console.log(num ," is negative.");
   }
 
-  sign(-25);
-  sign(0);
-  sign(5);
+  checkNumber(-25);
+  checkNumber(0);
+  checkNumber(5);
 
 
 // 6. Write a program that takes in a year and checks if it's a leap year or not using if else statement.
 
-let m=parseInt(prompt("Input year in 'YYYY' number format= "));
+let year=parseInt(prompt("Input year in 'YYYY' number format."));
 
 function leapYear(num){
   if (num%4===0){
-    console.log(num ," is a leap year and February takes 29 days");
+    console.log(num +" is a leap year and February takes 29 days");
   } else
-    console.log(num ," is not a leap year. You need to wait for ",4-(num%4)," years");
+    console.log(num +" is not a leap year. You need to wait for "+4-(num%4)+" years");
   }
 
-leapYear(m);
+leapYear(year);
 
 // 7. Write a program that takes in a temperature and checks if it's above or below freezing using if else statement.
 
-let s=parseInt(prompt("Input outdoor temperature= "));
+let temperature=parseInt(prompt("Input outdoor temperature: "));
 
-function weather(num){
+function getWeather(num){
   if (num<=0){
-    console.log(num ," is freezing, stay home, watch TV!");
+    console.log(num +" is freezing, stay home, watch TV!");
   } else if (num<=5){
-    console.log(num ," is uncomfortable, make your decision..");
+    console.log(num +" is uncomfortable, make your decision..");
   } else {
-    console.log(num ," is great, go out, watch the sun and do some sports..");
+    console.log(num +" is great, go out, watch the sun and do some sports..");
   }
 }
 
-weather(s);
+getWeather(temperature);
 
 // 8. Write a program that takes in a person's height and weight and checks if they are considered underweight, normal, overweight, or obese using if else statement.
 // Body Mass Index (BMI) is a person’s weight in kilograms (or pounds) divided by the square of height in meters (or feet). A high BMI can indicate high body fatness. 
@@ -192,28 +192,28 @@ indexBMI(height, weight);
 
 // 9. Write a program that takes in a person's age and checks if they are a child (age 0-12), teenager (age 13-19), adult (age 20-64), or senior citizen (age 65 and above) using if else statement.
 
-let w=parseInt(prompt("Input your age= "));
+let age=parseInt(prompt("Input your age= "));
 
-function maturity(num){
+function checkAgeGroup(num){
   if (num<=12){
-    console.log(num ,"You are a child.");
+    console.log(num +"You are a child.");
   } else if (num<=19){
-    console.log(num ,"You are a teenager.");
+    console.log(num +"You are a teenager.");
   } else if (num<=64) {
-    console.log(num ,"You are an adult.");
+    console.log(num +"You are an adult.");
   } else {
-    console.log(num ,"You are a senior citizen.");
+    console.log(num +"You are a senior citizen.");
   }
 }
 
-maturity(w);
+checkAgeGroup(age);
 
 // 10. Write a program that asks the user to enter their age and whether they are a student (yes or no). If the age is less than 18 and the user is a student, print "You are a student and not old enough to vote". If the age is between 18 and 65 (inclusive) and the user is not a student, print "You are eligible to vote". If the age is greater than 65, print "You are a senior citizen". If the user is a student but their age is greater than or equal to 18, print "You are old enough to vote".
 
-let age=parseInt(prompt("Input your age= "));
-let student=prompt("Are you a student (Y/N)= ");
+let age2=parseInt(prompt("Input your age: "));
+let student=prompt("Are you a student (Y/N): ");
 
-function votable(a, b){
+function canVote(a, b){
   if (a<18 && b==="Y"){
     console.log("You are a student and not old enough to vote");
   } else if (a>=18 && a<66 && b==="N"){
@@ -227,7 +227,7 @@ function votable(a, b){
   }
 }
 
-votable(age, student);
+canVote(age2, student);
 
 // 11. Write a program that asks the user to enter their salary and their years of experience. If the salary is less than $30,000 and the years of experience are less than 5, print "Sorry, we cannot offer you the job at this time". If the salary is less than $50,000 and the years of experience are between 5 and 10 (inclusive), print "We can offer you the job at a lower salary". If the salary is greater than or equal to $50,000 or the years of experience are greater than or equal to 10, print "We can offer you the job at the requested salary".
 
@@ -250,23 +250,23 @@ jobOffer(salary, experience);
 
 // 12. Write a program that asks the user to enter their score on a test. If the score is less than 60, print "You failed the test". If the score is between 60 and 70 (inclusive), print "You passed the test, but your grade is not great". If the score is between 71 and 80 (inclusive), print "You got a B". If the score is between 81 and 90 (inclusive), print "You got an A". If the score is greater than 90, print "You got an A+ - Great job!".
 
-let x=parseInt(prompt("Input your test score= "));
+let score=parseInt(prompt("Input your test score: "));
 
-function score(num){
+function checkScore(num){
   if (num<=60){
-    console.log("Your score: ",num ,". You failed the test.");
+    console.log("Your score: "+num +". You failed the test.");
   } else if (num>60&&num<=70){
-    console.log("Your score: ",num ,". You passed the test, but your grade is not great.");
+    console.log("Your score: "+num +". You passed the test, but your grade is not great.");
   } else if (num>70&&num<=80) {
-    console.log("Your score: ",num ,". You got a B.");
+    console.log("Your score: "+num +". You got a B.");
   } else if (num>80&&num<=90) {
-    console.log("Your score: ",num ,". You got an A.");
+    console.log("Your score: "+num +". You got an A.");
   } else {
-    console.log("Your score: ",num ,". You got an A+ - Great job!");
+    console.log("Your score: "+num +". You got an A+ - Great job!");
   }
 }
 
-score(x);
+checkScore(score);
 
 // 13. Write a program that asks the user to enter a month number (1-12) and displays the corresponding season name. Use a switch statement to handle the different cases.
 
@@ -312,31 +312,31 @@ function findSeasonName(month) {
 
 // 14. Write a program that asks the user to enter a grade letter (A, B, C, D, or F) and displays a message indicating whether the grade is passing (A, B, C) or failing (D, F). Use a switch statement to handle the different cases.
 
-let y=prompt("Input your grade (A,B,C,D or F?)= ");
+let yourGrade=prompt("Input your grade (A,B,C,D or F?): ");
 
 function grade(letter) {
     switch (letter) {
       case "A":
       case "B":
       case "C":
-          console.log("Grade: ",letter, " 'Passed'.");
+          console.log("Grade: "+letter+ " 'Passed'.");
           break;
 
       default:
-          console.log("Grade: ",letter, " 'Failed'.");
+          console.log("Grade: "+letter+ " 'Failed'.");
           break;
     }
   }
 
-grade(y);
+grade(yourGrade);
 
 // 15. Write a program that asks the user to enter their age, and then calculates and displays their age in dog years (where one human year is equivalent to seven dog years). If the user enters a negative number or zero, display an error message.
 
-let z=parseInt(prompt("Please enter your age to calculate dog-year equivalent= "));
+let ageOfDogYear=parseInt(prompt("Please enter your age to calculate dog-year equivalent: "));
 
 function dogYear(num){
   if (num>0){
-    console.log("Your dog-year equivalent: ",num*7);
+    console.log("Your dog-year equivalent: "+num*7);
   } else {
     do {  //works only one loop
     // alert("You must exist. Please enter a valid age");
@@ -375,5 +375,5 @@ function dogYear(num){
                     //   while(num>0);
 
 }
-
-dogYear(z);
+}
+dogYear(ageOfDogYear);
