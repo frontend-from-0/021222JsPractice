@@ -358,7 +358,7 @@ const studentsExercise9 = [
 		grade: 'B-',
 	},
 ];
-const studentsExercise9Result = studentsExercise9.filter(student => student.grade[0] !== "D");
+const studentsExercise9Result = studentsExercise9.filter(student => student.grade[0] !== "D" && student.grade !== "F");
 console.log(studentsExercise9Result);
 
 
