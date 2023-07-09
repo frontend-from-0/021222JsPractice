@@ -25,14 +25,14 @@ window.addEventListener('load',function(){
         //   el.classList.remove("active");
         // });
 
-        while(indicators.length>0){
-          indicators[0].classList.remove("active");
-        }
+        forEach(indicators => {
+          indicators.classList.remove("active");
+        });
 
       images[index].classList.add("active");
       indicators[index].classList.add("active");
 
-      images[index].classList.toggle("visible");
+      // images[index].classList.toggle("visible");
     // For every element in images array call a function that removes "active" class
 
     // Remove active class from all indicators
@@ -51,7 +51,7 @@ window.addEventListener('load',function(){
       currentIndex=0;
     };
     showImage(currentIndex);
-    return currentIndex;
+    
   }
 
   // handle previous click
@@ -60,10 +60,10 @@ window.addEventListener('load',function(){
     // decrease currentIndex. What happens if the current index is < 0?
     currentIndex--;
     if (currentIndex<0){
-      currentIndex=2;
+      currentIndex=images.length -1;
     };
     showImage(currentIndex);
-    return currentIndex;
+    
     // if else condition
   }
   console.log(currentIndex);
