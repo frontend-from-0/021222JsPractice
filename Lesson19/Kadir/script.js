@@ -80,7 +80,7 @@ liItems[0].remove();
     newButton = document.createElement('button');
     newButton.innerHTML = "Hide images";
     document.getElementById('main').appendChild(newButton);
-    let x=1;
+    let x=true;
     newButton.addEventListener("click", myFunction);
       function myFunction() {
          // var x = document.querySelectAll('newButton');
@@ -88,17 +88,17 @@ liItems[0].remove();
         // if (false) {
         //   images[0].style.display="block";
         // } else {
-        if(x%2==1){
+        if(x==true){
           newButton.innerHTML = "Show images";
           images[0].style.display="none";
-          x+=1
+          x==false;
           // console.log('xs= ', x);
-          return x
+          return x;
         } else  {
           newButton.innerHTML = "Hide images";
           images[0].style.display="block";
-          x+=1
+          x==true;
           // console.log('xh= ', x);
-          return x
+          return x;
         } 
       }
