@@ -229,7 +229,6 @@ function getValueFromNestedObject(obj, key) {
   const outputValue = getValueFromNestedObject(inputObject, 'c');
   console.log(outputValue);
   
-
 // 14. Write a function that takes a nested object and a key, and returns the depth of the key in the object, otherwise -1.
 // Input: ({a: {b: {c: 5}}}, 'c')
 // Output: 3
