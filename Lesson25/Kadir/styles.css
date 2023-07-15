@@ -44,6 +44,12 @@ ul {
   margin: 0;
 }
 
+.controls-container {
+  display:flex;
+  justify-content: space-evenly;
+}
+
+
 .button {
   padding: 10px 20px;
   
