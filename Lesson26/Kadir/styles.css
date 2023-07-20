@@ -56,6 +56,7 @@ input {
   grid-template-areas: 
     "header edit"
     "main main";
+  justify-items: stretch;
   background-color: #fff;
   border-radius: 5px;
   margin-bottom: 20px;
@@ -106,6 +107,7 @@ input {
 
 .button--edit {
   grid-area: edit;
+  text-align: center;
 }
 
 
