@@ -115,8 +115,8 @@ input {
 
 .button--return {
   display:flex;
-  align-items: start;
-  justify-content: start;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .button--primary {
