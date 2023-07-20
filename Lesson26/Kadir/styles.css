@@ -99,6 +99,7 @@ input {
 .button--edit {
   display: flex;
   flex-direction: row;
+  align-items: end;
 }
 
 
