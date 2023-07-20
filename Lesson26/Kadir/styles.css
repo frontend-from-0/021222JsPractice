@@ -51,8 +51,8 @@ input {
 
 .post {
   display: grid;
-  grid-template-columns: 5fr 1fr;
-  grid-template-rows: 1fr 2fr;
+  grid-template-columns: 6fr 1fr;
+  grid-template-rows: 0.5fr 2fr;
   grid-template-areas: 
     "header edit"
     "main main";
