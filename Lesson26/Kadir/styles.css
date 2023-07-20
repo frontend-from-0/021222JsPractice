@@ -50,8 +50,12 @@ input {
 }
 
 .post {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  grid-template-rows: 1fr 2fr;
+  grid-template-areas: 
+    "header edit"
+    "main main";
   background-color: #fff;
   border-radius: 5px;
   margin-bottom: 20px;
@@ -61,12 +65,14 @@ input {
 .post-title {
   font-size: 20px;
   font-weight: bold;
+  grid-area: header;
   color: #333;
   margin: 0 0 10px;
 }
 
 .post-body {
   color: #666;
+  grid-area: main;
   margin: 0;
 }
 
@@ -99,7 +105,7 @@ input {
 }
 
 .button--edit {
-  align-items: end;
+  grid-area: edit;
 }
 
 
