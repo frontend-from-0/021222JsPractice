@@ -64,6 +64,7 @@ input {
 }
 
 .post-body {
+  display: flex;
   color: #666;
   margin: 0;
 }
@@ -97,8 +98,7 @@ input {
 }
 
 .button--edit {
-  display: flex;
-  flex-direction: row;
+  
   align-items: end;
 }
 
