@@ -15,10 +15,10 @@ body {
   padding: 20px;
   display: flex;
 	flex-direction: column;
-	flex-wrap: wrap;
+	/* flex-wrap: wrap;
 	justify-content: flex-start;
 	align-items: center;
-	align-content: center;
+	align-content: center; */
 }
 
 .controls-container {
@@ -114,7 +114,7 @@ input {
 }
 
 .button--return {
-text-align: center;
+  text-align: center;
 }
 
 .button--primary {
