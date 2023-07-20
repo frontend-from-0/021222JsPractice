@@ -17,6 +17,7 @@ function fetchPosts() {
 				const editButton = document.createElement('a');
 				editButton.classList.add('button');
 				editButton.classList.add('button--danger');
+				editButton.classList.add('button--edit');
 				editButton.textContent = "Edit";
 				editButton.href = `./edit-post/edit-post.html?postId=${post.id}`;
 				listItem.appendChild(editButton);

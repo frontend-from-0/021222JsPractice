@@ -96,6 +96,12 @@ input {
   background-color: #79000cf4;
 }
 
+.button--edit {
+  display: flex;
+  flex-direction: column;
+}
+
+
 .button--primary {
   text-decoration: none;
   background-color: #15287a;
