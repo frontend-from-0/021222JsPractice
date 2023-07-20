@@ -110,6 +110,11 @@ input {
   text-align: center;
 }
 
+.button--return {
+  text-align: center;
+  align-items: flex-start;
+  justify-content:flex-start;
+}
 
 .button--primary {
   text-decoration: none;
