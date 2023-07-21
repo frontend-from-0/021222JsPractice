@@ -1,23 +1,35 @@
+const URL = 'https://jsonplaceholder.typicode.com/posts/${post.id}';
 
 window.addEventListener('load', () => {
 	const url = new URL(window.location.href);
 	const postId = url.searchParams.get('postId');
 // });
 
-	// Fetch the data for the given postId
-	const postData = await fetchPostById(postId);
-  
-	// Display the fetched data in the post body
-	const postBodyElement = document.getElementById('post-body'); // Assuming you have a post body element in your HTML
-	postBodyElement.textContent = postData.body;
+	 // Function to fetch JSON data based on postId
+	 async function fetchPostById(postId) {
+        // Replace 'api/posts' with your actual API endpoint
+        const response = await fetch(URL);
+        const postData = await response.json();
+        return postData;
+      }
+
+      // Fetch the JSON data based on postId
+      fetchPostById(postId)
+        .then((postData) => {
+          // Now you have access to the postData object, and you can edit it as needed.
+        //   console.log('Original post data:', postData);
+          // Perform the necessary editing operations...
+          const postTitleElement = document.getElementById('edit-title');
+          postTitleElement.textContent = `Title: ${postData.title}`;
+          // For example, display the edited data in the post body element
+          const postBodyElement = document.getElementById('edit-body');
+          postBodyElement.textContent = `Body: ${postData.body}`;
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
   });
   
-  // Function to fetch a specific post by its ID
-  async function fetchPostById(postId) {
-	const response = await fetch(`../index.html?postId=${postId}`);
-	const postData = await response.json();
-	return postData;
-  }
   
 /* 
 TODO: add logic and necessary element to the HTML file to create a form where a post can be edited.
