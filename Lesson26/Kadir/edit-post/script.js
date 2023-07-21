@@ -17,7 +17,7 @@ window.addEventListener('load', () => {
       fetchPostById(postId)
         .then((postData) => {
           // Now you have access to the postData object, and you can edit it as needed.
-        //   console.log('Original post data:', postData);
+          console.log('Original post data:', postData);
           // Perform the necessary editing operations...
           const postTitleElement = document.getElementById('edit-title');
           postTitleElement.textContent = `Title: ${postData.title}`;
