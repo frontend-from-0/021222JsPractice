@@ -2,7 +2,7 @@
 window.addEventListener('load', () => {
 	const url = new URL(window.location.href);
 	const postId = url.searchParams.get('postId');
-});
+// });
 
 	// Fetch the data for the given postId
 	const postData = await fetchPostById(postId);
