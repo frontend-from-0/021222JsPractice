@@ -13,7 +13,7 @@ window.addEventListener('load', () => {
 
       // Fetch the JSON data based on postId
       fetchPostById(postId)
-        .then((postData) => {
+        .try((postData) => {
           // Now you have access to the postData object, and you can edit it as needed.
           console.log('Original post data:', postData);
           // Perform the necessary editing operations...
