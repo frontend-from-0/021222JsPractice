@@ -1,4 +1,4 @@
-const URL2 = 'https://jsonplaceholder.typicode.com/posts/${post.id}';
+const URL2 = './index.html/posts/${post.id}';
 
 window.addEventListener('load', () => {
 	const url = new URL(window.location.href);
