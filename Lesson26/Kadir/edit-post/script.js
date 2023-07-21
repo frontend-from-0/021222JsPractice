@@ -4,6 +4,7 @@ window.addEventListener('load', () => {
 	const postId = url.searchParams.get('postId');
 });
 
+
 /* 
 TODO: add logic and necessary element to the HTML file to create a form where a post can be edited.
 When page is loaded, the default values should contain current title and body of the post.
