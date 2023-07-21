@@ -1,4 +1,4 @@
-const URL = 'https://jsonplaceholder.typicode.com/posts/${post.id}';
+const URL2 = 'https://jsonplaceholder.typicode.com/posts/${post.id}';
 
 window.addEventListener('load', () => {
 	const url = new URL(window.location.href);
@@ -8,7 +8,7 @@ window.addEventListener('load', () => {
 	 // Function to fetch JSON data based on postId
 	 async function fetchPostById(postId) {
         // Replace 'api/posts' with your actual API endpoint
-        const response = await fetch(URL);
+        const response = await fetch(URL2);
         const postData = await response.json();
         return postData;
       }
