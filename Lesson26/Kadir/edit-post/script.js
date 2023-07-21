@@ -1,14 +1,12 @@
-const URL2 = './index.html/posts/${post.id}';
-
 window.addEventListener('load', () => {
 	const url = new URL(window.location.href);
 	const postId = url.searchParams.get('postId');
-// });
+});
 
 	 // Function to fetch JSON data based on postId
 	 async function fetchPostById(postId) {
         // Replace 'api/posts' with your actual API endpoint
-        const response = await fetch(URL2);
+        const response = await fetch('./index.html/posts/${post.id}');
         const postData = await response.json();
         return postData;
       }
@@ -28,7 +26,7 @@ window.addEventListener('load', () => {
         .catch((error) => {
           console.error('Error:', error);
         });
-  });
+//   });
   
   
 /* 
