@@ -4,7 +4,21 @@ window.addEventListener('load', () => {
 	const postId = url.searchParams.get('postId');
 });
 
-
+	// Fetch the data for the given postId
+	const postData = await fetchPostById(postId);
+  
+	// Display the fetched data in the post body
+	const postBodyElement = document.getElementById('post-body'); // Assuming you have a post body element in your HTML
+	postBodyElement.textContent = postData.body;
+  });
+  
+  // Function to fetch a specific post by its ID
+  async function fetchPostById(postId) {
+	const response = await fetch(`../index.html?postId=${postId}`);
+	const postData = await response.json();
+	return postData;
+  }
+  
 /* 
 TODO: add logic and necessary element to the HTML file to create a form where a post can be edited.
 When page is loaded, the default values should contain current title and body of the post.
