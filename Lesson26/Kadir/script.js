@@ -51,9 +51,10 @@ function clearPosts() {
 };
 
 function deletePost() {
-	return fetch(`${URL}/${post.id}`, {
+	fetch(`${URL}/${post.id}`, {
 		method: 'DELETE',
-	});
+	})
+	.then(fetchPosts());
 };
 
 document.getElementById('fetch-button').addEventListener('click', fetchPosts);
