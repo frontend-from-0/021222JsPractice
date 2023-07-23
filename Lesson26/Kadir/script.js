@@ -51,7 +51,7 @@ function clearPosts() {
 };
 
 function deletePost() {
-	fetch(`${URL}/${post.id}`, {
+	fetch(window.location.href, {
 		method: 'DELETE',
 	})
 	.then(fetchPosts());
