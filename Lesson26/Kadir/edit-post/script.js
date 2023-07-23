@@ -62,8 +62,8 @@ form.addEventListener("submit", (event) => editPost(event, postId));
 function editPost(event, postId) {
 	event.preventDefault();
 
-	const titleEdit = document.getElementById('edit-title').target(post.title);  
-	const bodyEdit = document.getElementById('edit-body').target(post.body);
+	const titleEdit = document.getElementById('edit-title').target(post.title).textContent;  
+	const bodyEdit = document.getElementById('edit-body').target(post.body).textContent;
 
 	fetch('https://jsonplaceholder.typicode.com/posts/'+postId, {
 	method: 'PUT',
