@@ -24,18 +24,12 @@ function fetchPosts() {
 
 				const deleteButton = document.createElement('button');
 				deleteButton.classList.add('button');
-				deleteButton.classList.add('button--danger');
 				deleteButton.textContent = "Delete";
 				deleteButton.style.backgroundColor = 'black';
 				deleteButton.style.color = 'white';
 				deleteButton.style.textDecorationThickness='15px'
-				function deletePost() {
-					fetch(`${URL}/${post.id}`, {
-						method: 'DELETE',
-					});
-				};
 				listItem.appendChild(deleteButton);
-				deleteButton.addEventListener('click',deletePost);
+
 
 				// https://domain.com/home-page/something-else?queryParam1=queryParam1Value&queryParam2=queryParam2Value
 
@@ -56,5 +50,12 @@ function clearPosts() {
   postsContainer.innerHTML = '';
 };
 
+function deletePost() {
+	fetch(`${URL}/${post.id}`, {
+		method: 'DELETE',
+	});
+};
+
 document.getElementById('fetch-button').addEventListener('click', fetchPosts);
 document.getElementById('clear-button').addEventListener('click', clearPosts);
+deleteButton.addEventListener('click',deletePost);
