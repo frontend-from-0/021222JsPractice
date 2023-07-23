@@ -51,7 +51,7 @@ function clearPosts() {
 };
 
 function deletePost() {
-	fetch(`${URL}/${post.id}`, {
+	return fetch(`${URL}/${post.id}`, {
 		method: 'DELETE',
 	});
 };
