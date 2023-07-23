@@ -52,7 +52,7 @@ function clearPosts() {
 
 function deletePost() {
 	console.log("delete started");
-	fetch(window.location.href, {
+	fetch(deleteButton.href, {
 		method: 'DELETE',
 	})
 	.then(fetchPosts())
