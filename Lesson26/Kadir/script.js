@@ -60,7 +60,7 @@ function deletePost() {
 	})
 	.then(fetchPosts())
 	.catch((error) => {
-		console.error('An error occurred while fetching the post: ', error);
+		console.error('An error occurred while deleting the post: ', error);
 	});
 };
 
