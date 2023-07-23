@@ -23,7 +23,6 @@ function fetchPosts() {
 				listItem.appendChild(editButton);
 
 				const deleteButton = document.createElement('button');
-				const url = new URL(window.location.href);
 				deleteButton.classList.add('button');
 				deleteButton.classList.add('button--danger');
 				deleteButton.textContent = "Delete";
@@ -31,7 +30,7 @@ function fetchPosts() {
 				deleteButton.style.color = 'white';
 				deleteButton.style.textDecorationThickness='15px'
 				function deletePost() {
-					fetch(`${URL}/${postId}`, {
+					fetch(`./index.html/${postId}`, {
 						method: 'DELETE',
 					});
 				};
