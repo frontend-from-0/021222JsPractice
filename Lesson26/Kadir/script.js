@@ -51,7 +51,7 @@ function clearPosts() {
 };
 
 function deletePost() {
-	console.log("delete started")
+	console.log("delete started");
 	fetch(window.location.href, {
 		method: 'DELETE',
 	})
