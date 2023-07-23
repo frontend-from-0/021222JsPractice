@@ -165,8 +165,16 @@ The page should containt a button to return back to the main page.
 	// 	bodyInput.value = currentPostData.body;
 	//   };
 
+// window.addEventListener('load', () => {
+// 	const url = new URL(window.location.href);
+// 	const postId = url.searchParams.get('postId');
+// });
 
-	const URL = 'https://jsonplaceholder.typicode.com/posts';
+
+const URL = 'https://jsonplaceholder.typicode.com/posts';
+// Get the chosen post ID from the URL query parameter
+const postId = new URLSearchParams(window.location.search).get('postId');
+
 const editPostForm = document.getElementById('edit-post-form');
 
 // Function to fetch the data of the chosen post
@@ -230,8 +238,6 @@ function handleFormSubmit(event) {
     });
 }
 
-// Get the chosen post ID from the URL query parameter
-const postId = new URLSearchParams(window.location.search).get('postId');
 
 // Fetch the chosen post data and pre-fill the form
 fetchPost(postId)

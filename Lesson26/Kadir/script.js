@@ -22,6 +22,18 @@ function fetchPosts() {
 				editButton.href = `./edit-post/edit-post.html?postId=${post.id}`;
 				listItem.appendChild(editButton);
 
+				const deleteButton = document.createElement('button');
+				deleteButton.classList.add('button');
+				deleteButton.classList.add('button--danger');
+				deleteButton.textContent = "Delete";
+				function deletePost() {
+					fetch('https://jsonplaceholder.typicode.com/posts/1', {
+						method: 'DELETE',
+					});
+				};
+				listItem.appendChild(deleteButton);
+				deleteButton.addEventListener('click',deletePost);
+
 				// https://domain.com/home-page/something-else?queryParam1=queryParam1Value&queryParam2=queryParam2Value
 
 				const paragraph = document.createElement('p');
