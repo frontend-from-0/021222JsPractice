@@ -63,6 +63,9 @@ function editPost(event) {
 const titleEdit = document.getElementById('edit-title');  
 const bodyEdit = document.getElementById('edit-body');
 
+titleEdit.append(post.title);
+bodyEdit.append(post.body);
+
 fetch('https://jsonplaceholder.typicode.com/posts/'+'?postId=postId', {
   method: 'PUT',
   body: JSON.stringify({
