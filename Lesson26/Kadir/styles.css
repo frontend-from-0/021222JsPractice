@@ -58,7 +58,7 @@ input {
   grid-template-rows: 0.5fr 1.5fr;
   grid-template-areas: 
     "header edit"
-    "main main";
+    "main delete";
   justify-items: stretch;
   background-color: #fff;
   border-radius: 5px;
