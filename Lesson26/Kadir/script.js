@@ -51,10 +51,15 @@ function clearPosts() {
 };
 
 function deletePost() {
+	console.log("delete started")
 	fetch(window.location.href, {
 		method: 'DELETE',
 	})
-	.then(fetchPosts());
+	.then(fetchPosts())
+	.then(console.log("delete finished"))
+	.catch((error) => {
+		console.error('An error occurred while fetching the post: ', error);
+	});
 };
 
 document.getElementById('fetch-button').addEventListener('click', fetchPosts);
