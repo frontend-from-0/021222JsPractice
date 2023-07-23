@@ -56,4 +56,4 @@ function deletePost() {
 
 document.getElementById('fetch-button').addEventListener('click', fetchPosts);
 document.getElementById('clear-button').addEventListener('click', clearPosts);
-document.getElementsByClassName('button--delete').addEventListener('click',deletePost);
+document.getElementsByClassName('button--delete').addEventListener('click', deletePost);
