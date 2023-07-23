@@ -1,8 +1,3 @@
-window.addEventListener('load', () => {
-	const url = new URL(window.location.href);
-	const postId = url.searchParams.get('postId');
-});
-
 	//  // Function to fetch JSON data based on postId
 	//  async function fetchPostById(postId) {
     //     // Replace 'api/posts' with your actual API endpoint
@@ -56,32 +51,38 @@ window.addEventListener('load', () => {
 // 			console.error('An error occured: ', error);
 // 		});
 // };
+window.addEventListener('load', () => {
+	const url = new URL(window.location.href);
+	const postId = url.searchParams.get('postId');
+});
 
-function editPost(event) {
+const form = document.getElementById("edit-post-form");
+form.addEventListener("submit", (event) => editPost(event, postId));
+
+function editPost(event, postId) {
 	event.preventDefault();
 
-const titleEdit = document.getElementById('edit-title');  
-const bodyEdit = document.getElementById('edit-body');
+	const titleEdit = document.getElementById('edit-title').innerText;  
+	const bodyEdit = document.getElementById('edit-body').innerText;
 
-titleEdit.append(post.title);
-bodyEdit.append(post.body);
+	titleEdit.append(post.title);
+	bodyEdit.append(post.body);
 
-fetch('https://jsonplaceholder.typicode.com/posts/'+'?postId=postId', {
-  method: 'PUT',
-  body: JSON.stringify({
-    id: postId,
-    title: titleEdit,
-    body: bodyEdit,
-    userId: 1,
-  }),
-  headers: {
-    'Content-type': 'application/json; charset=UTF-8',
-  },
-})
+	fetch('https://jsonplaceholder.typicode.com/posts/'+postId, {
+	method: 'PUT',
+	body: JSON.stringify({
+		id: postId,
+		title: titleEdit,
+		body: bodyEdit,
+		userId: 1,
+	}),
+	headers: {
+		'Content-type': 'application/json; charset=UTF-8',
+	},
+	})
   .then((response) => response.json())
   .then((json) => console.log(json));
 
-  form.addEventListener("submit", (event) => editPost(event));
 } 
 /* 
 TODO: add logic and necessary element to the HTML file to create a form where a post can be edited.
