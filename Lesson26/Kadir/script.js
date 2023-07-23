@@ -25,6 +25,7 @@ function fetchPosts() {
 				const deleteButton = document.createElement('a');
 				deleteButton.classList.add('button');
 				deleteButton.classList.add('button--delete');
+				deleteButton.id="delete-post";
 				deleteButton.href = `${URL}/${post.id}`;
 				deleteButton.textContent = "Delete";
 				listItem.appendChild(deleteButton);
@@ -57,4 +58,4 @@ function deletePost() {
 
 document.getElementById('fetch-button').addEventListener('click', fetchPosts);
 document.getElementById('clear-button').addEventListener('click', clearPosts);
-document.getElementsByClassName('button--delete').addEventListener('click', deletePost);
+document.getElementsById('delete-post').addEventListener('click', deletePost);
