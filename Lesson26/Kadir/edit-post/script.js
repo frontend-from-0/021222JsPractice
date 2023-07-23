@@ -3,30 +3,48 @@ window.addEventListener('load', () => {
 	const postId = url.searchParams.get('postId');
 });
 
-	 // Function to fetch JSON data based on postId
-	 async function fetchPostById(postId) {
-        // Replace 'api/posts' with your actual API endpoint
-        const response = await fetch('./index.html?postId=${post.id}`);
-        const postData = await response.json();
-        return postData;
-      }
+	//  // Function to fetch JSON data based on postId
+	//  async function fetchPostById(postId) {
+    //     // Replace 'api/posts' with your actual API endpoint
+    //     const response = await fetch (url+'?postId=${post.id}`);
+    //     const postData = await response.json();
+    //     return postData;
+    //   }
 
-      // Fetch the JSON data based on postId
-      fetchPostById(postId)
-        .try((postData) => {
-          // Now you have access to the postData object, and you can edit it as needed.
-          console.log('Original post data:', postData);
-          // Perform the necessary editing operations...
-          const postTitleElement = document.getElementById('edit-title');
-          postTitleElement.textContent = `Title: ${postData.title}`;
-          // For example, display the edited data in the post body element
-          const postBodyElement = document.getElementById('edit-body');
-          postBodyElement.textContent = `Body: ${postData.body}`;
-        })
-        .catch((error) => {
-          console.error('Error:', error);
-        });
+    //   // Fetch the JSON data based on postId
+    //   fetchPostById(postId)
+    //     .try((postData) => {
+    //       // Now you have access to the postData object, and you can edit it as needed.
+    //       console.log('Original post data:', postData);
+    //       // Perform the necessary editing operations...
+    //       const postTitleElement = document.getElementById('edit-title');
+    //       postTitleElement.textContent = `Title: ${postData.title}`;
+    //       // For example, display the edited data in the post body element
+    //       const postBodyElement = document.getElementById('edit-body');
+    //       postBodyElement.textContent = `Body: ${postData.body}`;
+    //     })
+    //     .catch((error) => {
+    //       console.error('Error:', error);
+    //     });
 //   });
+
+const titleEdit = document.getElementById('edit-title');  
+const bodyEdit = document.getElementById('edit-body');
+
+fetch('https://jsonplaceholder.typicode.com/posts?postId=${post.id}', {
+  method: 'PUT',
+  body: JSON.stringify({
+    id: postId,
+    title: titleEdit,
+    body: bodyEdit,
+    userId: 1,
+  }),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+  .then((response) => response.json())
+  .then((json) => console.log(json));
   
   
 /* 
