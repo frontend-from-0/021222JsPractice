@@ -39,12 +39,16 @@ function fetchPosts() {
 				listItem.appendChild(paragraph);
 
 				postsContainer.appendChild(listItem);
+				console.log(listItem);
+				console.log(postsContainer);
 			})
 		)
     .catch((error) => {
 			console.error('An error occured: ', error);
 		});
 };
+
+
 
 function clearPosts() {
   postsContainer.innerHTML = '';
