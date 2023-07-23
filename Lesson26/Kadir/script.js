@@ -27,7 +27,7 @@ function fetchPosts() {
 				deleteButton.textContent = "Delete";
 				deleteButton.style.backgroundColor = 'black';
 				deleteButton.style.color = 'white';
-				deleteButton.style.textDecorationThickness='15px'
+				deleteButton.style.textDecorationThickness='50px'
 				listItem.appendChild(deleteButton);
 
 
@@ -58,4 +58,4 @@ function deletePost() {
 
 document.getElementById('fetch-button').addEventListener('click', fetchPosts);
 document.getElementById('clear-button').addEventListener('click', clearPosts);
-deleteButton.addEventListener('click',deletePost);
+document.getElementsByName('deleteButton').addEventListener('click',deletePost);
