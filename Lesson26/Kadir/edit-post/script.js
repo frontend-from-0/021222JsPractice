@@ -31,7 +31,7 @@ window.addEventListener('load', () => {
 const titleEdit = document.getElementById('edit-title');  
 const bodyEdit = document.getElementById('edit-body');
 
-fetch('https://jsonplaceholder.typicode.com/posts?postId=${post.id}', {
+fetch('https://jsonplaceholder.typicode.com/posts/'+'?postId=${post.id}', {
   method: 'PUT',
   body: JSON.stringify({
     id: postId,
