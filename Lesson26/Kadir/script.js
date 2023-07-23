@@ -30,7 +30,7 @@ function fetchPosts() {
 				deleteButton.style.color = 'white';
 				deleteButton.style.textDecorationThickness='15px'
 				function deletePost() {
-					fetch(`${URL}/${postId}`, {
+					fetch(`${URL}/${post.id}`, {
 						method: 'DELETE',
 					});
 				};
