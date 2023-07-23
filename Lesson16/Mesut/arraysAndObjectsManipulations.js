@@ -95,34 +95,73 @@ console.log('-------------exercise 9---------------');
 // Input: ({name: "John", age: 30, city: "New York"}, "surname")
 // Output: false
 
-function check(obj,key){
-    for(let i=0;i<Object.values(obj).length;i++){
-        if()
-    }
+// function check(obj,key){
+//     for(let i=0;i<Object.values(obj).length;i++){
+//         if()
+//     }
 
 
 
 
-}
+
 console.log('--------------exercise 10--------------');
 // 10. Write a function that takes an object and a key-value pair, and adds the key-value pair to the object.
 // Input: ({name: "John", age: 30}, "city", "New York")
 // Output: {name: "John", age: 30, city: "New York"}
+
+function addKeyValue(obj,key,value){
+    let x ={};
+    obj[key]=value;
+   return obj
+}
+console.log(addKeyValue({name: "John", age: 30}, "city", "New York"));
 
 console.log('-------------exercise 11---------------');
 // 11. Write a function that takes an object and a key, and removes the key-value pair from the object.
 // Input: ({name: "John", age: 30, city: "New York"}, "city")
 // Output: {name: "John", age: 30}
 
+function deleteKeyValue(obj, key){
+    delete obj[key]
+    return obj;
+    
+}
+
+console.log(deleteKeyValue({name: "John", age: 30, city: "New York"}, "city"));
+
 console.log('-------------exercise 12---------------');
 // 12. Write a function that takes two arrays of equal length and returns an object with the first array as keys and the second array as values.
 // Input: (["name", "age", "city"], ["John", 30, "New York"])
 // Output: {name: "John", age: 30, city: "New York"}
+//?????????????????????????????????????????????????????/
+function concatenateArrays(arr1, arr2){
+    let obj={};
+    for(let i=0;i<arr1.length;i++){
+        obj[arr1[i]]=arr2[i];   
+   
+    }
+   return obj;
+}
+
+console.log(concatenateArrays=(["name", "age", "city"], ["John", 30, "New York"]));
+
+//?????????????????????????????????????????????????????/
 console.log('-------------exercise 13---------------');
 // 13. Write a function that takes a nested object and a key, and returns the value of the key if it exists at any level, otherwise null.
 // Input: ({a: {b: {c: 5}}}, 'c')
 // Output: 5
+
+function inception(obj,value){
+let x=Object.keys(obj)
+if(x[0]==value){
+    return value;
+}else{
+    return inception(Object.values(obj)[0],value)
+}
+}console.log(inception({a: {b: {c: 5}}}, 'c'));
+//i couldn't manage to return null if key does not exist
 console.log('-------------exercise 14---------------');
 // 14. Write a function that takes a nested object and a key, and returns the depth of the key in the object, otherwise -1.
 // Input: ({a: {b: {c: 5}}}, 'c')
 // Output: 3
+//this is above my range, for now
