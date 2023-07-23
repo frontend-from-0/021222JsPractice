@@ -6,7 +6,7 @@ window.addEventListener('load', () => {
 	 // Function to fetch JSON data based on postId
 	 async function fetchPostById(postId) {
         // Replace 'api/posts' with your actual API endpoint
-        const response = await fetch('./index.html/${post.id}');
+        const response = await fetch('./index.html?postId=${post.id}`);
         const postData = await response.json();
         return postData;
       }
