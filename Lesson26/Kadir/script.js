@@ -26,6 +26,8 @@ function fetchPosts() {
 				deleteButton.classList.add('button');
 				deleteButton.classList.add('button--danger');
 				deleteButton.textContent = "Delete";
+				deleteButton.style.backgroundColor = 'yellow';
+				deleteButton.style.color = 'red';
 				function deletePost() {
 					fetch('https://jsonplaceholder.typicode.com/posts/1', {
 						method: 'DELETE',
