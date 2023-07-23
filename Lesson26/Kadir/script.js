@@ -22,9 +22,10 @@ function fetchPosts() {
 				editButton.href = `./edit-post/edit-post.html?postId=${post.id}`;
 				listItem.appendChild(editButton);
 
-				const deleteButton = document.createElement('button');
+				const deleteButton = document.createElement('a');
 				deleteButton.classList.add('button');
 				deleteButton.classList.add('button--delete');
+				deleteButton.href = `${URL}/${post.id}`;
 				deleteButton.textContent = "Delete";
 				listItem.appendChild(deleteButton);
 
