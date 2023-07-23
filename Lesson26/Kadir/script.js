@@ -30,7 +30,7 @@ function fetchPosts() {
 				deleteButton.style.color = 'white';
 				deleteButton.style.textDecorationThickness='15px'
 				function deletePost() {
-					fetch('https://jsonplaceholder.typicode.com/posts/1', {
+					fetch('https://jsonplaceholder.typicode.com/posts/'+${postId}, {
 						method: 'DELETE',
 					});
 				};
