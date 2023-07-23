@@ -127,4 +127,8 @@ input {
   background-color: #0d1d67;
 }
 
-
+.button--delete {
+  background-color: #1a0407;
+  color:#e6cece;
+  text-decoration-thickness: 50px;
+}
