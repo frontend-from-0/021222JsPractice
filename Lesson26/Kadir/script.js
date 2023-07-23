@@ -51,12 +51,10 @@ function clearPosts() {
 };
 
 function deletePost() {
-	console.log("delete started");
-	fetch(deleteButton.href.value, {
+	fetch(deleteButton.href, {
 		method: 'DELETE',
 	})
 	.then(fetchPosts())
-	.then(console.log("delete finished"))
 	.catch((error) => {
 		console.error('An error occurred while fetching the post: ', error);
 	});
