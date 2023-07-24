@@ -27,7 +27,7 @@ function fetchPosts() {
 				deleteButton.classList.add('button--delete');
 				deleteButton.textContent = "Delete";
 				deleteButton.id="delete-post";
-				deleteButton.href = `${URL}+${post.id}`;
+				deleteButton.href = `${URL}/${post.id}`;
 				listItem.appendChild(deleteButton);
 
 
@@ -54,7 +54,7 @@ function clearPosts() {
 };
 
 function deletePost() {
-	fetch(`${URL}+${post.id}`, {
+	fetch(`${URL}/${post.id}`, {
 		method: 'DELETE',
 	})
 	.then(fetchPosts())
