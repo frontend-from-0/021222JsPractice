@@ -177,6 +177,8 @@ const postId = new URLSearchParams(window.location.search).get('postId');
 
 const editPostForm = document.getElementById('edit-post-form');
 
+const postsContainer = document.getElementById('posts-container');
+
 // Function to fetch the data of the chosen post
 function fetchPost(postId) {
   return fetch(`${URL}/${postId}`)
@@ -234,6 +236,22 @@ function handleFormSubmit(event) {
         successMessage.classList.add('success-message');
         successMessage.textContent = 'Post updated successfully!';
         editPostForm.appendChild(successMessage);
+
+		const listItem = document.createElement('li');
+		listItem.classList.add('post');
+		
+		const heading = document.createElement('h2');
+		heading.classList.add('post-title');
+		heading.innerText = post.title;
+		listItem.appendChild(heading);
+
+		const paragraph = document.createElement('p');
+		paragraph.classList.add('post-body');
+		paragraph.innerText = post.body;
+		listItem.appendChild(paragraph);
+
+		postsContainer.appendChild(listItem);
+
       }
     });
 }

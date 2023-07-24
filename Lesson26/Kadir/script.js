@@ -39,8 +39,7 @@ function fetchPosts() {
 				listItem.appendChild(paragraph);
 
 				postsContainer.appendChild(listItem);
-				console.log(listItem);
-				console.log(postsContainer);
+
 			})
 		)
     .catch((error) => {
@@ -66,4 +65,4 @@ function deletePost() {
 
 document.getElementById('fetch-button').addEventListener('click', fetchPosts);
 document.getElementById('clear-button').addEventListener('click', clearPosts);
-document.getElementById('delete-post').addEventListener('click', deletePost);
+document.postsContainer.getElementById('delete-post').addEventListener('click', deletePost);
