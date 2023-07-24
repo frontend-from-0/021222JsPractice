@@ -239,15 +239,15 @@ function handleFormSubmit(event) {
 
 		const listItem = document.createElement('li');
 		listItem.classList.add('post');
-		
+
 		const heading = document.createElement('h2');
 		heading.classList.add('post-title');
-		heading.innerText = post.title;
+		heading.innerText = updatedPost.title;
 		listItem.appendChild(heading);
 
 		const paragraph = document.createElement('p');
 		paragraph.classList.add('post-body');
-		paragraph.innerText = post.body;
+		paragraph.innerText = updatedPost.body;
 		listItem.appendChild(paragraph);
 
 		postsContainer.appendChild(listItem);
