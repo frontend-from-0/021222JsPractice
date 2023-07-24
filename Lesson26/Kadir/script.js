@@ -54,7 +54,7 @@ function clearPosts() {
 };
 
 function deletePost() {
-	fetch(deleteButton.href, {
+	fetch(`${URL}+${post.id}`, {
 		method: 'DELETE',
 	})
 	.then(fetchPosts())
