@@ -279,7 +279,7 @@ console.log(productsExercise6Result);
 const numbersExercise7 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const numbersExercise7Result = numbersExercise7.filter(
-  (number) => number % 3 === 0
+  (number) => number % 3 !== 0
 );
 console.log(numbersExercise7Result);
 
@@ -367,7 +367,8 @@ const studentsExercise9 = [
 ];
 
 const studentsExercise9Result = studentsExercise9.filter(
-  (student) => student.grade >= "C"
+  (student) =>
+    student.grade !== "D+" || student.grade !== "D" || student.grade !== "D-"
 );
 console.log(studentsExercise9Result);
 
