@@ -10,25 +10,27 @@ const postList = document.getElementById("post-list");
 function fetchPosts() {
   fetch(URL)
     .then((response) => response.json())
-    .then((posts) => {
-      posts.foreach((post) => {
-        const postList = document.createElement("li");
-        postList.classList.add("post");
+    .then((posts) =>
+      posts.forEach((post) => {
+        const listItem = document.createElement("li");
+        listItem.classList.add("post");
 
         const postTitle = document.createElement("h2");
         postTitle.classList.add("post-title");
         postTitle.innerText = post.title;
-        postList.appendChild(postTitle);
+        listItem.appendChild(postTitle);
 
         const postBody = document.createElement("p");
-        postBody.classList.add('post-body');
+        postBody.classList.add("post-body");
         postBody.innerText = post.body;
-        postList.appendChild('postBody');
-      });
+        listItem.appendChild(postBody);
+
+        postList.appendChild(listItem);
+      })
+    )
+    .catch((error) => {
+      console.error("hata:", error);
     });
-    .catch((error)=>{
-        console.error(error);
-    })
 }
 
 function clearPosts() {
