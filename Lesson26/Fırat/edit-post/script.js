@@ -1,7 +1,46 @@
+window.addEventListener("load", () => {
+  const url = new URL(window.location.href);
+  const postId = url.searchParams.get("postId");
 
-window.addEventListener('load', () => {
-	const url = new URL(window.location.href);
-	const postId = url.searchParams.get('postId');
+  const inputTitle = document.getElementById("input-title");
+  const inputBody = document.getElementById("input-body");
+  const resultDiv = document.getElementById("result");
+
+  fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
+    .then((response) => response.json())
+    .then((data) => {
+      inputTitle.value = data.title;
+      inputBody.value = data.body;
+    })
+    .catch((error) => console.error(error));
+
+  document
+    .getElementById("edit-post-form")
+    .addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const newTitle = inputTitle.value;
+      const newBody = inputBody.value;
+
+      fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`, {
+        method: "PUT",
+        body: JSON.stringify({
+          title: newTitle,
+          body: newBody,
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          resultDiv.innerHTML = "Post updated successfully!";
+        })
+        .catch((error) => {
+          resultDiv.innerHTML = "An error occurred while updating the post.";
+          console.error(error);
+        });
+    });
 });
 
 /* 
