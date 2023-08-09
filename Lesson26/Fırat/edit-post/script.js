@@ -34,10 +34,10 @@ window.addEventListener("load", () => {
       })
         .then((response) => response.json())
         .then((data) => {
-          resultDiv.innerHTML = "Post updated successfully!";
+          resultDiv.innerText = "Post updated successfully!";
         })
         .catch((error) => {
-          resultDiv.innerHTML = "An error occurred while updating the post.";
+          resultDiv.innerText = "An error occurred while updating the post.";
           console.error(error);
         });
     });
