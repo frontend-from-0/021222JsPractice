@@ -14,3 +14,5 @@ function clearPosts() {
 
 document.getElementById('fetch-button').addEventListener('click', fetchPosts);
 document.getElementById('clear-button').addEventListener('click', clearPosts);
+
+// window.addEventListener('load', fetchPosts);
