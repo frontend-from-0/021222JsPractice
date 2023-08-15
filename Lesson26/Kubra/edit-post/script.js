@@ -2,6 +2,56 @@
 window.addEventListener('load', () => {
 	const url = new URL(window.location.href);
 	const postId = url.searchParams.get('postId');
+
+
+	const heading = document.getElementById('input-title');
+	const paragraph = document.getElementById('input-body');
+	const editPost = document.getElementById('edit-post');
+
+	fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
+		.then((response) => response.json())
+		.then((data) => {
+			heading.value = data.title;
+			paragraph.value = data.body;
+		});
+
+	editPost.addEventListener('click', (e) => {
+		e.preventDefault();
+
+		const newHeading = heading.value;
+		const newParagraph = paragraph.value
+
+		fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`, {
+			method: 'PUT',
+			body: JSON.stringify({
+				id: postId,
+				title: newHeading,
+				body: newParagraph,
+			}),
+			headers: {
+				'Content-type': 'application/json; charset=UTF-8',
+			},
+		})
+			.then((response) => response.json())
+			.then((newPost) => {
+				const editedLiItem = document.getElementById('edited-li-item');
+
+				const editedHeading = document.createElement('h2');
+				editedHeading.classList.add('post-title');
+				editedHeading.innerText = newHeading;
+				editedLiItem.appendChild(editedHeading);
+
+				const editedParagraph = document.createElement('p');
+				editedParagraph.classList.add('post-body');
+				editedParagraph.innerText = newParagraph;
+				editedLiItem.appendChild(editedParagraph);
+			})
+			
+			const clearInputTitle = document.getElementById('input-title')
+			clearInputTitle.value = '';
+			const clearInputBody = document.getElementById('input-body')
+			clearInputBody.value = '';
+	});
 });
 
 /* 

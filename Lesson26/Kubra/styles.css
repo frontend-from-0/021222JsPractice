@@ -98,6 +98,7 @@ input {
 
 .button--primary {
   text-decoration: none;
+  text-align: center;
   background-color: #15287a;
 }
 
@@ -106,4 +107,13 @@ input {
   background-color: #0d1d67;
 }
 
+.button--edit {
+ text-decoration: none;
+ display: inline-block;
+ margin: 20px 20px 20px 0px;
+}
+
+.button--delete {
+  text-decoration: none;
+}
 
