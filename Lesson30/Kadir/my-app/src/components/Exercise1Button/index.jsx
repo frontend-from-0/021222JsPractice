@@ -19,10 +19,3 @@ export const Exercise1Button2 = () => {
       <button onClick={function () {setLabel('Clicked')} }>{label}</button>
   )
 };
-
- 
-
-
-
-
-
