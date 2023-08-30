@@ -1,10 +1,18 @@
 li {
-  padding: 10px;
+  padding: 10px 0px;
   border-bottom: 1px solid #ddd;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
+}
+.deletebtn {
+  margin-left: 50px;
+  padding: 5px 10px;
+}
+.deletebtn:hover {
+  border: 1px solid grey;
+  border-radius: 5px;
 }
 
 li:last-child {
