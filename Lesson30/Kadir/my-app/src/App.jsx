@@ -29,3 +29,4 @@ Develop a click counter using a functional component. Display the number of time
     </div>
   );
 };
+

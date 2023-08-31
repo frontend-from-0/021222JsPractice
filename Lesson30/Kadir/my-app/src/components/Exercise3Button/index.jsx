@@ -26,3 +26,4 @@ export const Exercise3Button2 = () => {
       <button onClick={handleClick}>Button {counter}</button>
     );
   };
+  
