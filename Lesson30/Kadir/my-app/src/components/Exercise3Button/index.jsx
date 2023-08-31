@@ -13,5 +13,16 @@ export const Exercise3Button = () => {
         <button onClick={() => handleClick(counter)}>Button {counter}</button>
       );
   }
+
+  // KCS Extension
+export const Exercise3Button2 = () => {
+    const [counter, setCounter] = useState(0);
   
+    const handleClick = () => {
+      setCounter(prevCounter => prevCounter + 1);
+    };
   
+    return (
+      <button onClick={handleClick}>Button {counter}</button>
+    );
+  };

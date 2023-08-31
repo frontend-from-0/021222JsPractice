@@ -6,3 +6,18 @@ const handleClick  = (event) => {
 
   return (<a href="https://www.google.com/" onClick = {handleClick}>link</a>)
 };
+
+// KCS Extension
+
+export const Exercise6Component2 = () => {
+  const handleLinkClick = (event) => {
+    console.log(event.target.href);
+    event.preventDefault();
+  };
+
+  return (
+    <button><a href="https://www.google.com/" onClick={handleLinkClick}>
+      Click me to visit Google!
+    </a></button>
+  );
+};

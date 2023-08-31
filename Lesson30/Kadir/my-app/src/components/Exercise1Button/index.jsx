@@ -13,9 +13,26 @@ function handleClick() {
 
 
 export const Exercise1Button2 = () => {
-  const [label, setLabel] = useState('Button 3');
+  const [label, setLabel] = useState('Button 2');
 
   return (
       <button onClick={function () {setLabel('Clicked')} }>{label}</button>
+  )
+}
+
+// KCS Extension
+export const Exercise1Button3 = () => {
+  const initialLabel = 'Button 3';
+  const [label, setLabel] = useState(initialLabel);
+
+  const handleClick = () => {
+    const newLabel = label === initialLabel ? 'Clicked!' : initialLabel;
+    setLabel(newLabel);
+  };
+
+  return (
+    <button onClick={handleClick}>
+      {label}
+    </button>
   )
 };
