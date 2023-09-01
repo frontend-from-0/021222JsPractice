@@ -3,14 +3,14 @@ console.log('- - - - - -exercise 1 - - - - - - - - - - - ');
 // 1. Write a loop that prints out the numbers from 1 to 10.
 
 for(let i=1; i<11; i++){
-    console.log(i)
+    console.log(i);
 }
 
 console.log('- - - - - - - -exercise 2 - - - - - - - - - ');
 // 2. Write a loop that prints out the odd numbers from 1 to 20.
 // 1,3,5,7...
 for(let i=1; i<21; i+=2){
-    console.log(i)
+    console.log(i);
 }
 
 console.log('- - - - - - - -exercise 3 - - - - - - - - - ');
@@ -18,21 +18,22 @@ console.log('- - - - - - - -exercise 3 - - - - - - - - - ');
 // // 2, 4, 6...
 
 for (let i= 2; i<21; i +=2 ){
-    console.log(i)
+    console.log(i);
 }
 
 console.log('- - - - - - -exercise 4 - - - - - - - - - - ');
 // // 4. Write a loop that finds the maximum number in an array of numbers.
 
 const findMaxNumberInArray = [3, 10, 23, 42, 55, 12, 7, 4, 90];
-let maxNumberInArray= findMaxNumberInArray[0]
+let maxNumberInArray= findMaxNumberInArray[0];
 
 for(let i=0; i<findMaxNumberInArray.length; i++){
 
 if (findMaxNumberInArray[i]> maxNumberInArray) {
     maxNumberInArray=findMaxNumberInArray[i];
 };
-};console.log(maxNumberInArray);
+};
+console.log(maxNumberInArray);
 
 
 
@@ -88,16 +89,16 @@ console.log('- - - - - - - - exercise 9- - - - - - - - - ');
 let x=1;
 do{
     console.log(x);
-x++
+x++;
 
-}while(x<11)
+}while(x<11);
 
 console.log('- - - - - - - - exercise 10- - - - - - - - - ');
 // 10. Write a for...in loop that prints out the keys and values of an object.
 let person = {name: "John", surname: "Doe", age: 30, city: "New York"};
 
 for(let keyValue in person){
-    console.log(keyValue+":"+person[keyValue])
+    console.log(keyValue+":"+person[keyValue]);
 }
 
 console.log('- - - - - - - - exercise 11- - - - - - - - - ');
@@ -105,6 +106,6 @@ console.log('- - - - - - - - exercise 11- - - - - - - - - ');
 let obj = {a: 10, b: 20, c: 30};
 let sum=0;
 for(let number in obj){
-sum =sum+obj[number]
+sum =sum+obj[number];
 }
 console.log(sum);
