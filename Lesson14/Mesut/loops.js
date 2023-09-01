@@ -71,11 +71,17 @@ while(a>0){
 console.log('- - - - - - - - - exercise 8- - - - - - - - ');
 // 8. Write a while loop that generates random numbers between 1 and 10 until a number greater than 8 is generated, and then prints out the total number of iterations.
 
-let randomNumber =0;
+let randomNumber =1;
+let count =0;
 while(randomNumber<8){
-    randomNumber= Math.random()*10
+    randomNumber=Math.ceil(Math.random()*10);
+    console.log(randomNumber);
+
+    count++
+   
+
 }
-console.log(randomNumber);
+console.log("number of iterations are: "+count);
 
 console.log('- - - - - - - - exercise 9- - - - - - - - - ');
 // 9. Write a do-while loop that counts from 1 to 10 and prints out each number.
@@ -94,7 +100,7 @@ for(let keyValue in person){
     console.log(keyValue+":"+person[keyValue])
 }
 
-
+console.log('- - - - - - - - exercise 11- - - - - - - - - ');
 // 11. Write a for...in loop that sums the values of an object.
 let obj = {a: 10, b: 20, c: 30};
 let sum=0;
