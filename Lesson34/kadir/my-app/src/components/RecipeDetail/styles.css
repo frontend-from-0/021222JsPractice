@@ -1,0 +1,4 @@
+.recipe__image {
+  max-width: 100%;
+  border-radius: var(--border-radius);
+}
