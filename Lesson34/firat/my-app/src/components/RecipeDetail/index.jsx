@@ -1,35 +1,93 @@
-import { useEffect, useState } from 'react';
-import './styles.css';
+import React from "react";
+import "./styles.css";
+import { HiPlusCircle } from "react-icons/hi";
 
-export const RecipeDetail = ({ recipe }) => {
-	const [ingredients, setIngredients] = useState([]);
-	useEffect(() => {
-		// According to the documentation, the max amount of ingredients is 20
-		const maxAmountOfIngredients = 20;
-		const ingredientsTemp = [];
-		for (let i = 1; i <= maxAmountOfIngredients; i++) {
-			const ingredientKey = `strIngredient${i}`;
-			const measureKey = `strMeasure${i}`;
-			const ingredient = recipe[ingredientKey];
-			const measure = recipe[measureKey];
+export const RecipeDetail = ({ selectedRecipe, onClose }) => {
+  const getIngredients = () => {
+    const ingredients = [];
 
-			if (ingredient.trim().length > 0 || measure.trim().length > 0) {
-				ingredientsTemp.push(`${measure} ${ingredient}`);
-			}
-		}
-		setIngredients(ingredientsTemp);
-	}, []);
+    for (let i = 1; i <= 20; i++) {
+      const ingredientKey = `strIngredient${i}`;
+      const measureKey = `strMeasure${i}`;
 
-	return (
-		<div className='recipe-detail-container'>
-			<h2>{recipe.strMeal}</h2>
-			<img className='recipe__image' src={recipe.strMealThumb} alt={recipe.strMeal} />
-			<h3>INGREDIENTS</h3>
-			<ul>
-				{ingredients.map((ingredient) => (
-					<li key={ingredient}>{ingredient}</li>
-				))}
-			</ul>
-		</div>
-	);
+      const ingredient = selectedRecipe[ingredientKey];
+      const measure = selectedRecipe[measureKey];
+
+      if (!ingredient || !measure) {
+        break;
+      }
+      ingredients.push(`${measure} -- ${ingredient}`);
+    }
+    return ingredients;
+  };
+  const recipeIngredients = getIngredients();
+
+  return (
+    <div className="detail-container">
+      <div className="recipe-info">
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <div>
+            <h2>{selectedRecipe.strMeal}</h2>
+            <p>
+              Video link:{" "}
+              <a
+                href={selectedRecipe.strYoutube}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "blue" }}
+              >
+                {" "}
+                Click here ...{" "}
+              </a>
+            </p>
+          </div>
+          <div>
+            <img
+              style={{ width: "100%", borderRadius: "10px" }}
+              src={selectedRecipe.strMealThumb}
+              alt="#"
+            />
+          </div>
+          <button
+            style={{
+              height: "2rem",
+              width: "50%",
+              fontSize: "1rem",
+              borderRadius: "5px",
+              fontWeight: "600",
+              marginTop: "10px",
+            }}
+            onClick={onClose}
+          >
+            Close
+          </button>
+        </div>
+      </div>
+      <div className="ingredient-info">
+        <h2>Ingredients</h2>
+
+        <ul>
+          {recipeIngredients.map((ingredient) => (
+            <li className="ingredients-list" key={ingredient}>
+              <HiPlusCircle
+                style={{ marginRight: "5px", color: "skyblue" }}
+              ></HiPlusCircle>{" "}
+              {ingredient}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="instruction-info">
+        <h2>Instruction</h2>
+        <p>{selectedRecipe.strInstructions}</p>
+      </div>
+    </div>
+  );
 };
