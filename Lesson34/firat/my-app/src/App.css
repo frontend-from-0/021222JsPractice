@@ -1,24 +1,18 @@
-header {
-  height: 80px;
+* {
+  list-style: none;
+  text-decoration: none;
+}
+
+.App {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  position: relative;
-}
-
-.header__back-button {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  border: 0;
-  border-radius: 50%;
-  background-color: inherit;
-  padding: 10px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.header__back-button:hover {
-  font-weight: 600;
-  transition: font-weight 0.3s ease;
+  align-items: center;
+  /* background-image: linear-gradient(
+    to top,
+    #f3e7e9 0%,
+    #e3eeff 99%,
+    #e3eeff 100%
+  ); */
+  background-color: #e3eeff;
 }
