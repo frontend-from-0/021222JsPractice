@@ -1,12 +1,10 @@
-import React from "react";
 import { useState } from "react";
 
 export const Exercise8 = () => {
   const [list, setList] = useState(["Item 1", "Item 2", "Item 3", "Item 4"]);
 
   const handleRemove = (index) => {
-    const newList = [...list];
-    newList.splice(index, 1);
+    const newList = list.filter((item, i) => i !== index);
     setList(newList);
   };
 
@@ -16,7 +14,7 @@ export const Exercise8 = () => {
         {list.map((item, index) => (
           <li key={index}>
             {item}
-            <button onClick={handleRemove}>remove</button>
+            <button onClick={() => handleRemove(index)}>remove</button>
           </li>
         ))}
       </ul>
