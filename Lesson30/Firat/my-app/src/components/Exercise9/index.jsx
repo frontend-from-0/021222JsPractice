@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 export const Exercise9 = () => {
   const [backgroundColor, setBackgroundColor] = useState("white");
