@@ -1,5 +1,5 @@
 import "./styles.css";
-import React, { useState } from "react";
+import { useState } from "react";
 
 export const NewItem = ({ handleAddItem }) => {
   const [text, setText] = useState("");
