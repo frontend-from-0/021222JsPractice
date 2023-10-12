@@ -1,12 +1,9 @@
-import React from "react";
-
 export const Exercise7 = () => {
   const handleParentClick = () => {
     console.log("Parent clicked!");
   };
 
   const handleChildClick = (event) => {
-    event.stopPropagation();
     console.log("Child clicked!");
   };
 
