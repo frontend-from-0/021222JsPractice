@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export const Exercise2 = () => {
-  const [label, setLabel] = useState(false);
+  const [label, setLabel] = useState("On");
 
   return (
     <button
