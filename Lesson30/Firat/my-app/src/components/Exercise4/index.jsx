@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 export const Exercise4 = () => {
   const [items, setItems] = useState(["Item 1", "Item 2", "Item 3"]);
