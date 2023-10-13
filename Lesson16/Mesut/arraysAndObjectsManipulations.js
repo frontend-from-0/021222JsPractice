@@ -28,7 +28,7 @@ console.log('-----------exercise 4-----------------');
 // Input: [1, 2, 3, 4, 7, 10];
 // Output: [1, 3, 7]
 function oddNumbers(arr){
-    let newArr=[]
+    let newArr=[];
 for(let num in arr){
     if(arr[num]%2==!0){
         newArr.push(arr[num]);
@@ -37,22 +37,22 @@ for(let num in arr){
 }
 console.log(newArr);
 }
-oddNumbers([1, 2, 3, 4, 7, 10])
+oddNumbers([1, 2, 3, 4, 7, 10]);
 console.log('------------exercise 5----------------');
 // 5. Write a function that takes an array of integers and returns a new array with even numbers only.
 // Input: [1, 2, 3, 4, 7, 10]
 // Output: [1, 2, 4, 10]
 
 function evenNumbers(arr){
-    let newArr2=[];
+    let newArr=[];
     for(let i=0;i<arr.length;i++){
         if(arr[i]%2===0){
-            newArr2.push(arr[i])
+            newArr2.push(arr[i]);
         }
     }
     console.log(newArr2);
 }
-evenNumbers([1, 2, 3, 4, 7, 10])
+evenNumbers([1, 2, 3, 4, 7, 10]);
 console.log('------------exercise 6----------------');
 // 6. Write a function that takes an array and a value, and returns a new array with all occurrences of the value removed.
 // Input: ([1, 2,3,2, 4, 2,122,11,12], 2)
@@ -62,14 +62,14 @@ function deletedArr(arr,n){
     let newArr4=[];
     for (let i = 0; i < arr.length; i++) {
       if(arr[i] !==n){
-        newArr4.push(arr[i])
+        newArr4.push(arr[i]);
       }
         
     }
     console.log(newArr4);
 }
 
-deletedArr([1, 2, 3, 4,3, 3,11,18,2,2,2,78], 3)
+deletedArr([1, 2, 3, 4,3, 3,11,18,2,2,2,78], 3);
 
 console.log('--------------exercise 7--------------');
 // 7. Write a function that takes an object and returns the keys as an array.
@@ -85,7 +85,7 @@ function justKeys(obj){
     console.log(keys);
 }
 
-justKeys({name: "John", age: 30, city: "New York"})
+justKeys({name: "John", age: 30, city: "New York"});
 
 console.log('------------exercise 8----------------');
 console.log('-------------exercise 9---------------');
@@ -112,7 +112,7 @@ console.log('--------------exercise 10--------------');
 function addKeyValue(obj,key,value){
     let x ={};
     obj[key]=value;
-   return obj
+   return obj;
 }
 console.log(addKeyValue({name: "John", age: 30}, "city", "New York"));
 
@@ -122,7 +122,7 @@ console.log('-------------exercise 11---------------');
 // Output: {name: "John", age: 30}
 
 function deleteKeyValue(obj, key){
-    delete obj[key]
+    delete obj[key];
     return obj;
     
 }
@@ -152,11 +152,11 @@ console.log('-------------exercise 13---------------');
 // Output: 5
 
 function inception(obj,value){
-let x=Object.keys(obj)
+let x=Object.keys(obj);
 if(x[0]==value){
     return value;
 }else{
-    return inception(Object.values(obj)[0],value)
+    return inception(Object.values(obj)[0],value);
 }
 }console.log(inception({a: {b: {c: 5}}}, 'c'));
 //i couldn't manage to return null if key does not exist
