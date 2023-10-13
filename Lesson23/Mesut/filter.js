@@ -281,7 +281,7 @@ const productsExercise6 = [
 	},
 ];
 
-const productsExercise6Result= productsExercise6.filter(product=>product.quantity===0);
+const productsExercise6Result= productsExercise6.filter(product=>product.quantity>0);
 console.log(productsExercise6Result);
 console.log("---------Exercise 7--------------");
 // Exercise 7:
@@ -376,7 +376,7 @@ const studentsExercise9 = [
 	},
 ];
 
-const studentsExercise9Result=studentsExercise9.filter(student=>student.grade=="A"||student.grade=="B"||student.grade=="C")
+const studentsExercise9Result=studentsExercise9.filter(student=>student.grade=="A"||student.grade=="A-"||student.grade=="B+"||student.grade=="B"||student.grade=="B-"||student.grade=="C")
 console.log(studentsExercise9Result);
 console.log("---------Exercise 10-------------");
 // Exercise 10:
