@@ -47,10 +47,6 @@ window.addEventListener('load', () => {
 				editedLiItem.appendChild(editedParagraph);
 			})
 			
-			const clearInputTitle = document.getElementById('input-title')
-			clearInputTitle.value = '';
-			const clearInputBody = document.getElementById('input-body')
-			clearInputBody.value = '';
 	});
 });
 

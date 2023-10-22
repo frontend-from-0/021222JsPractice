@@ -22,17 +22,13 @@ function fetchPosts() {
 				listItem.appendChild(paragraph);
 
 				const editButton = document.createElement('a');
-				editButton.classList.add('button');
-				editButton.classList.add('button--danger');
-				editButton.classList.add('button--edit');
+				editButton.classList.add('button button--danger button--edit');
 				editButton.textContent = "Edit";
 				editButton.href = `./edit-post/edit-post.html?postId=${post.id}`;
 				listItem.appendChild(editButton);
 
 				const deleteButton = document.createElement('a');
-				deleteButton.classList.add('button');
-				deleteButton.classList.add('button--danger');
-				deleteButton.classList.add('button--delete');
+				deleteButton.classList.add('button button--danger button--delete');
 				deleteButton.textContent = "Delete"
 				listItem.appendChild(deleteButton);
 				deleteButton.addEventListener('click', () => {
