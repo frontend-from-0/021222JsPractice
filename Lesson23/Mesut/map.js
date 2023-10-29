@@ -41,6 +41,8 @@ console.log('Exercise 2', numbersExercise2, numbersExercise2Result);
 
 // Exercise 3:
 // Given an array of objects representing products, extract an array of their names using .map().
+
+
 const products = [
 	{
 		name: 'Laptop',
@@ -122,6 +124,8 @@ const wordsExercise4 = [
 	'island',
 	'jungle',
 ];
+
+
 const lengths = wordsExercise4.map((word) => word.length);
 console.log('Exercise 4', lengths);
 
@@ -133,6 +137,7 @@ console.log('Exercise 4', exercise4Result);
 
 // Exercise 5:
 // Given an array of student objects with their names and grades, extract an array of only the student names and grade using .map(). E.g. ['Alice A', ...]
+
 const studentsExercise5 = [
 	{
 		id: 1,
@@ -196,7 +201,8 @@ const studentsExercise5 = [
 	},
 ];
 
-// Commontly used words for .map function are item, value. In this specific case, could be student as well.
+
+// Commonly used words for .map function are item, value. In this specific case, could be student as well.
 const studentsExercise5Result = studentsExercise5.map(
 	(value) => value.name + ' ' + value.grade
 );
@@ -215,6 +221,9 @@ console.log('Exercise 5', studentsExercise5Result2);
 // Given an array of numbers, convert each number to a string representation using .map().
 const numbersExercise6 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
+const resultOfNumbersExercise6= numbersExercise6.map(num=>num.toString()) 
+console.log(resultOfNumbersExercise6);
+console.log("-------------------exercise 7-------------");
 // Exercise 7:
 // Given an array of sentences, split each sentence into an array of words using .map().
 const sentencesExercise7 = [
@@ -229,9 +238,13 @@ const sentencesExercise7 = [
 	'The mountain peaks were covered in snow.',
 	'The room was filled with laughter and joy.',
 ];
+const exercise7Result=sentencesExercise7.map(sentence=>sentence.split(" "));
 
+console.log(exercise7Result);
+console.log("-------------------exercise 8-------------");
 // Exercise 8:
 // Given an array of user objects, extract an array of their email addresses using .map().
+
 const usersExercise8 = [
 	{
 		id: 1,
@@ -294,9 +307,13 @@ const usersExercise8 = [
 		email: 'sophia@example.com',
 	},
 ];
+let usersExercise8Result=usersExercise8.map(user=>user.email);
+console.log(usersExercise8Result);
 
+console.log("-------------------exercise 9-------------");
 // Exercise 9:
 // Given an array of objects representing books, extract an array of book titles and authors using .map().
+
 const booksExercise9 = [
 	{
 		title: 'To Kill a Mockingbird',
@@ -360,6 +377,12 @@ const booksExercise9 = [
 	},
 ];
 
+const booksExercise9Result=booksExercise9.map(book=>book.title+"; "+book.author)
+console.log(booksExercise9Result);
+console.log("-------------------exercise 10-------------");
 // Exercise 10:
 // Given an array of prices, add a currency symbol to each price using .map().
 const pricesExercise10 = [1999, 899, 1499, 299, 399, 999, 499, 649, 99, 129];
+
+const pricesExercise10Result =pricesExercise10.map(price=>price+"$")
+console.log(pricesExercise10Result);
