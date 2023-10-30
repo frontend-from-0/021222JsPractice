@@ -2,6 +2,7 @@ import { createContext } from "react";
 import "./App.css";
 import { List } from "./components/List";
 import { Navbar } from './components/Navbar';
+import { NewListItem } from "./components/NewListItem";
 
 // Ilk context olusturma
 export const AppContext = createContext();

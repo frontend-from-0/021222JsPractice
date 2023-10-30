@@ -1,0 +1,10 @@
+form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-submit {
+    background-color: #38f25d;
+    margin: 0 5px;
+    
+}
