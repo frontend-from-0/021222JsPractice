@@ -5,6 +5,8 @@ import {InputForm} from './components/InputForm';
 import { Exercise1Button, Exercise1Button2 } from './components/Exercise1Button';
 import { Exercise3Button } from './components/Exercise3Button';
 import { Exercise6Component } from './components/Exercise6Component';
+import Exercise2Button from './components/Exercise2Button/Exercise2Button';
+import Exercise7Parent from './components/Exercise7Parent';
 
 export const App = () => {
 
@@ -21,8 +23,10 @@ Create a button in a functional component. When clicked, change the text of the 
 Develop a click counter using a functional component. Display the number of times a button has been clicked, and update it with each click.*/}
       <Exercise1Button />
       <Exercise1Button2 />
+      <Exercise2Button/>
       <Exercise3Button />
       <Exercise6Component/>
+      <Exercise7Parent/>
     </div>
   );
 };
