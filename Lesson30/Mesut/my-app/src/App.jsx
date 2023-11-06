@@ -7,6 +7,10 @@ import { Exercise3Button } from './components/Exercise3Button';
 import { Exercise6Component } from './components/Exercise6Component';
 import Exercise2Button from './components/Exercise2Button/Exercise2Button';
 import Exercise7Parent from './components/Exercise7Parent';
+import Exercise8two from './components/Exercise8two';
+import Exercise9 from './components/Exercise9';
+import Exercise10 from './components/Exercise10';
+
 
 export const App = () => {
 
@@ -27,6 +31,9 @@ Develop a click counter using a functional component. Display the number of time
       <Exercise3Button />
       <Exercise6Component/>
       <Exercise7Parent/>
+      <Exercise8two/>
+      <Exercise9/>
+      <Exercise10/>
     </div>
   );
 };
