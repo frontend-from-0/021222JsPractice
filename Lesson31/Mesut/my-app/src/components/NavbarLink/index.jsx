@@ -1,7 +1,5 @@
-export const NavbarLink = ({title}) => {
-  return (
-    <li>
-        {title}
-    </li>
+export const NavbarLink=({title})=>{
+  return(
+    <li>{title}</li>
   )
 }

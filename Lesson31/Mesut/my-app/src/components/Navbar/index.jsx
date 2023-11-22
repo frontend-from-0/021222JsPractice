@@ -1,11 +1,10 @@
+import { useContext } from "react";
+import { NavbarLink } from "../NavbarLink";
+import "./styles.css";
 import { AppContext } from "../../App";
-import {NavbarLink} from "../NavbarLink";
-import {useContext} from 'react';
-import './styles.css';
 
 export const Navbar = () => {
-  const {user} = useContext(AppContext);
-  console.log(user);
+  const { user } = useContext(AppContext);
   return (
     <nav className="navigation">
       <ul className="navigation-list">
@@ -13,10 +12,11 @@ export const Navbar = () => {
           <NavbarLink title="Logo" />
         </div>
         <div className="navigation--right">
-          <NavbarLink title="Menu"/>
-          {user.isLoggedInUser ? <NavbarLink title={`Hi, ${user.name}!`}/> : <NavbarLink title="Login"/>}
+          <NavbarLink title="Menu" />
+          {user.isLoggedInUser ?<NavbarLink title={`hi,${user.name}`} />: <NavbarLink title="Login" />}
+          
         </div>
       </ul>
     </nav>
-  )
-}
+  );
+};
