@@ -5,6 +5,7 @@ import {InputForm} from './components/InputForm';
 import { Exercise1Button, Exercise1Button2,Exercise1Button3 } from './components/Exercise1Button';
 import { Exercise3Button, Exercise3Button2 } from './components/Exercise3Button';
 import { Exercise6Component, Exercise6Component2 } from './components/Exercise6Component';
+import React from 'react';
 
 export const App = () => {
 

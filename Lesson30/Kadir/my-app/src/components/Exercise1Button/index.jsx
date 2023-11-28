@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import React, {useState} from 'react';
 
 export const Exercise1Button = () => {
   const [label, setLabel] = useState('Button');

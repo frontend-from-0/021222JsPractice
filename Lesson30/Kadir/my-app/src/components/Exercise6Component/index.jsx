@@ -1,3 +1,5 @@
+import React from 'react';
+
 export const Exercise6Component = () => {
 const handleClick  = (event) => {
   console.log(event);
