@@ -1,28 +1,28 @@
 import React, {useState} from 'react';
 
-export const Exercise1Button = () => {
-  const [label, setLabel] = useState('Button');
+// export const Exercise1Button = () => {
+//   const [label, setLabel] = useState('Button');
 
-function handleClick() {
-    setLabel('Clicked!');
-}
-    return (
-      <button onClick={handleClick}>{label}</button>
-    )
-}
+// function handleClick() {
+//     setLabel('Clicked!');
+// }
+//     return (
+//       <button onClick={handleClick}>{label}</button>
+//     )
+// }
 
 
-export const Exercise1Button2 = () => {
-  const [label, setLabel] = useState('Button 2');
+// export const Exercise1Button2 = () => {
+//   const [label, setLabel] = useState('Button 2');
 
-  return (
-      <button onClick={function () {setLabel('Clicked')} }>{label}</button>
-  )
-}
+//   return (
+//       <button onClick={function () {setLabel('Clicked')} }>{label}</button>
+//   )
+// }
 
 // KCS Extension
-export const Exercise1Button3 = () => {
-  const initialLabel = 'Button 3';
+export const Exercise1Button = () => {
+  const initialLabel = 'Button 1';
   const [label, setLabel] = useState(initialLabel);
 
   const handleClick = () => {

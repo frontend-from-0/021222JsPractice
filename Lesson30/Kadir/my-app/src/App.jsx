@@ -1,11 +1,15 @@
 import './App.css';
 // Example of renaming imported component
+import React from 'react';
 import { List as TodoList} from './components/List';
 import {InputForm} from './components/InputForm';
-import { Exercise1Button, Exercise1Button2,Exercise1Button3 } from './components/Exercise1Button';
-import { Exercise3Button, Exercise3Button2 } from './components/Exercise3Button';
+import { Exercise1Button } from './components/Exercise1Button';
+import { Exercise2Toggle} from './components/Exercise2Toggle';
+import { Exercise3Button } from './components/Exercise3Button';
+import { Exercise4Handler} from './components/Exercise4Handler';
 import { Exercise6Component, Exercise6Component2 } from './components/Exercise6Component';
-import React from 'react';
+
+
 
 export const App = () => {
 
@@ -20,11 +24,11 @@ export const App = () => {
 Create a button in a functional component. When clicked, change the text of the button to "Clicked!". */}
 {/*## Exercise 3: Click Counter
 Develop a click counter using a functional component. Display the number of times a button has been clicked, and update it with each click.*/}
+
       <Exercise1Button />
-      <Exercise1Button2 />
-      <Exercise1Button3 />
+      <Exercise2Toggle />
       <Exercise3Button />
-      <Exercise3Button2 />
+      <Exercise4Handler />
       <Exercise6Component/>
       <Exercise6Component2/>
     </div>
