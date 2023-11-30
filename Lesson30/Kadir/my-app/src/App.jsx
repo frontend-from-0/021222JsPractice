@@ -8,7 +8,7 @@ import { Exercise2Toggle} from './components/Exercise2Toggle';
 import { Exercise3Button } from './components/Exercise3Button';
 import { Exercise4Handler} from './components/Exercise4Handler';
 import { Exercise6Component, Exercise6Component2 } from './components/Exercise6Component';
-
+import { Exercise5Mouse } from './components/Exercise5Mouse';
 
 
 export const App = () => {
@@ -25,12 +25,12 @@ Create a button in a functional component. When clicked, change the text of the 
 {/*## Exercise 3: Click Counter
 Develop a click counter using a functional component. Display the number of times a button has been clicked, and update it with each click.*/}
 
-      <Exercise1Button />
-      <Exercise2Toggle />
-      <Exercise3Button />
-      <Exercise4Handler />
-      <Exercise6Component/>
-      <Exercise6Component2/>
+        <Exercise1Button />
+        <Exercise2Toggle />
+        <Exercise3Button />
+        <Exercise4Handler />
+        <Exercise6Component/>
+        <Exercise6Component2/>
     </div>
   );
 };

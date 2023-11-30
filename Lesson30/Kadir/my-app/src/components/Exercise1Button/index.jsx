@@ -31,8 +31,10 @@ export const Exercise1Button = () => {
   };
 
   return (
+
     <button onClick={handleClick}>
       {label}
     </button>
+
   )
 };
