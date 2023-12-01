@@ -10,6 +10,9 @@ import { Exercise4Handler} from './components/Exercise4Handler';
 import { Exercise6Component2 } from './components/Exercise6Component';
 import { Exercise5Mouse } from './components/Exercise5Mouse';
 import { Exercise7Event } from './components/Exercise7Event';
+import { Exercise8List } from './components/Exercise8List';
+// import { Exercise9Multiple } from './components/Exercise9Multiple';
+// import { Exercise10Double } from './components/Exercise10Double';
 
 export const App = () => {
 
@@ -20,18 +23,16 @@ export const App = () => {
       </header>
       <TodoList />
       <InputForm label="Title" age="22"/>
-      {/* ## Exercise 1: Basic Button Click
-Create a button in a functional component. When clicked, change the text of the button to "Clicked!". */}
-{/*## Exercise 3: Click Counter
-Develop a click counter using a functional component. Display the number of times a button has been clicked, and update it with each click.*/}
-
-        <Exercise1Button />
-        <Exercise2Toggle />
-        <Exercise3Button />
-        <Exercise4Handler />
-        <Exercise5Mouse />
-        <Exercise6Component2/>
-        <Exercise7Event />
+      <Exercise1Button />
+      <Exercise2Toggle />
+      <Exercise3Button />
+      <Exercise4Handler />
+      <Exercise5Mouse />
+      <Exercise6Component2/>
+      <Exercise7Event />
+      <Exercise8List />
+      {/* <Exercise9Multiple />
+      <Exercise10Double /> */}
     </div>
   );
 };
