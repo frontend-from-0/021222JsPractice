@@ -11,7 +11,7 @@ export const Exercise8List = () => {
 
     const handleList = () => {
         setItem(sourceList);  
-    }
+    };
 
     const [item, setItem] = useState( sourceList );
 
