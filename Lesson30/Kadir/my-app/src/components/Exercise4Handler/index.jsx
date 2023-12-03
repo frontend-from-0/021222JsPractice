@@ -1,12 +1,13 @@
-import React, {useState} from 'react';
+// import React, {useState} from 'react';
+import React from 'react';
 import {ListItem} from '../ListItem';
 
 export const Exercise4Handler = () => {
 
-  const [alertTitle,setAlertTitle]=useState('');
+  // const [alertTitle,setAlertTitle]=useState('');
 
   const handleItemClick = (title) => {
-    setAlertTitle(title);
+    // setAlertTitle(title);
     alert(title);
   };
 
