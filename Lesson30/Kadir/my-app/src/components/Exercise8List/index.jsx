@@ -17,7 +17,7 @@ export const Exercise8List = () => {
 
     const handleClick = (i) => {
         setItem(
-            item.filter((itemy, index) => index !== i)
+            item.filter((_item, index) => index !== i)
         )
     };
 
@@ -25,8 +25,8 @@ export const Exercise8List = () => {
         <div>
             <button onClick={handleList()}>Show entire list</button>
             <ul>
-                {item.map((itemy, index) => (
-                    <li key={index}>{itemy}
+                {item.map((_item, index) => (
+                    <li key={index}>{_item}
                     <button onClick={() => handleClick(index)}>X</button>
                     </li>
                 ))}
