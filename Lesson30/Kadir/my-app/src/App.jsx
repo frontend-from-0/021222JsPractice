@@ -12,7 +12,7 @@ import { Exercise5Mouse } from './components/Exercise5Mouse';
 import { Exercise7Event } from './components/Exercise7Event';
 import { Exercise8List } from './components/Exercise8List';
 import { Exercise9Multiple } from './components/Exercise9Multiple';
-// import { Exercise10Double } from './components/Exercise10Double';
+import { Exercise10Double } from './components/Exercise10Double';
 
 export const App = () => {
 
@@ -32,7 +32,7 @@ export const App = () => {
       <Exercise7Event />
       <Exercise8List />
       <Exercise9Multiple />
-      {/* <Exercise10Double /> */}
+      <Exercise10Double />
     </div>
   );
 };
