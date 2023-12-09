@@ -2,6 +2,7 @@ import { createContext } from "react";
 import "./App.css";
 import { List } from "./components/List";
 import { Navbar } from './components/Navbar';
+import { AddButton } from './components/AddButton';
 
 // Ilk context olusturma
 export const AppContext = createContext();
@@ -19,6 +20,7 @@ export const App = () => {
     <AppContext.Provider value={{user: loggedOutUser}}>
       <div className="container">
         <Navbar />
+        <AddButton />
         <div className="app">
           <List />
         </div>
