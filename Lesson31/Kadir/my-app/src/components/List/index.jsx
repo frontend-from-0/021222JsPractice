@@ -19,6 +19,14 @@ export const List = () => {
     });
   };
   
+  const handleDelete = (id) => {
+    setData((prevData) => {
+      return prevData.filter(dataItem => 
+        dataItem.id !== id)
+    });
+  };
+
+
 return (
   <ul className="todo-list">
       {
@@ -27,7 +35,8 @@ return (
         id={listItem.id}
         title={listItem.title}
         completed={listItem.completed}
-        handleClick={handleClick}/>)
+        handleClick={handleClick}
+        handleDelete={handleDelete}/>)
       }
   </ul>
 )
