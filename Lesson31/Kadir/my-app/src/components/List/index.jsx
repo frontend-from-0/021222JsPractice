@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ListItem } from "../ListItem";
-import { AddButton } from "../AddButton";
+import { newItem } from "../AddButton";
 import "./styles.css";
 
 export const List = () => {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./styles.css";
 
-export const AddButton = ({ addItem }) => {
+export const AddButton = ({ addItem, newItem }) => {
   const [text, setText] = useState("");
 
   const handleChange = (event) => {
