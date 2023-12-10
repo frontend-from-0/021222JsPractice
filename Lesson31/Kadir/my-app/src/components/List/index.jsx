@@ -46,7 +46,6 @@ export const List = () => {
           />
         ))}
       </ul>
-      <AddButton addItem={handleAddItem} />
     </div>
   );
 };
