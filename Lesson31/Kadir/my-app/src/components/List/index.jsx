@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ListItem } from "../ListItem";
-import { newItem } from "../AddButton";
+import { AddButton, newItem } from "../AddButton";
 import "./styles.css";
 
 export const List = () => {
@@ -41,11 +41,11 @@ export const List = () => {
             title={listItem.title}
             completed={listItem.completed}
             handleClick={handleClick}
-            handleDelete={handleDelete}
-            handleAddItem={handleAddItem} // Pass the function to each ListItem
+            handleDelete={handleDelete} // Pass the function to each ListItem
           />
         ))}
       </ul>
+      <AddButton handleAddItem={handleAddItem} />
     </div>
   );
 };
