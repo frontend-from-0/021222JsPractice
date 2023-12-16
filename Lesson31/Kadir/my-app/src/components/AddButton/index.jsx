@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./styles.css";
-import {List} from List;
+import {List} from "../List";
 
 export const AddButton = () => {
   const [text, setText] = useState("");
