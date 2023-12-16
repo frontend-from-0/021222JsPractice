@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "./styles.css";
+import {List} from List;
 
-export const AddButton = ({ addItem, newItem }) => {
+export const AddButton = () => {
   const [text, setText] = useState("");
+  const [newItem, setNewItem] = useState(null); // Define a state to store the newItem
 
   const handleChange = (event) => {
     setText(event.target.value);
@@ -10,19 +12,18 @@ export const AddButton = ({ addItem, newItem }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (text.trim() !== "") {
-      const newItem = {
-        id: Math.floor(Math.random() * 1000), // Adjust the range as needed
+    text.trim() !== "" &&
+      setNewItem({
+        id: Math.floor(Math.random() * 1000),
         title: text,
         completed: false,
-      };
-      addItem(newItem); // Pass the new item to the parent component
-      setText("");
-    }
+      });
+    setText(""); // Clear the input field
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div>
+    <form onSubmit={handleSubmit} >
       <input
         type="text"
         className="input-field"
@@ -30,9 +31,11 @@ export const AddButton = ({ addItem, newItem }) => {
         value={text}
         onChange={handleChange}
       />
-      <button type="submit" className="btn-submit">
+      <button type="submit" className="btn-submit" >
         Submit
       </button>
     </form>
+    {newItem && <List newItem={newItem} />}
+    </div>
   );
 };

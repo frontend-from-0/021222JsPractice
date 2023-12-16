@@ -15,7 +15,7 @@
 //   const loggedOutUser = {
 //     isLoggedInUser: false
 //   };
-  
+
 //   return (
 //     <AppContext.Provider value={{user: loggedOutUser}}>
 //       <div className="container">
@@ -31,7 +31,6 @@
 //   );
 // };
 
-
 // Try to finish the Todo list application that we did in the lesson.
 // Add input to add new todo items, a submit button and a delete button to each of the list elements.
 
@@ -39,15 +38,15 @@
 import React, { createContext, useState } from "react";
 import "./App.css";
 import { List } from "./components/List";
-import { Navbar } from './components/Navbar';
-import { AddButton } from './components/AddButton';
+import { Navbar } from "./components/Navbar";
+// import { AddButton } from "./components/AddButton";
 
 export const AppContext = createContext({ isLoggedInUser: false });
 
 export const App = () => {
   const [user, setUser] = useState({
     isLoggedInUser: false,
-    name: "John"
+    name: "John",
   });
 
   const handleLogin = () => {
@@ -58,10 +57,10 @@ export const App = () => {
     setUser(loggedOutUser);
   };
 
-  const handleAddItem = (text) => {
-    // Add your logic to handle the new item here
-    console.log("New item:", text);
-  };
+  // const handleAddItem = (text) => {
+  //   // Add your logic to handle the new item here
+  //   console.log("New item:", text);
+  // };
 
   return (
     <AppContext.Provider value={{ user, handleLogin, handleLogout }}>
@@ -69,8 +68,8 @@ export const App = () => {
         <Navbar />
         <div className="app">
           <List />
-          {/* Render input and submit button from AddButton in App */}
-          <AddButton addItem={handleAddItem} />
+          {/* // Render input and submit button from AddButton in App
+          <AddButton addItem={handleAddItem} /> */}
         </div>
       </div>
     </AppContext.Provider>
@@ -79,9 +78,9 @@ export const App = () => {
 
 const loggedInUser = {
   isLoggedInUser: true,
-  name: "John"
+  name: "John",
 };
 
 const loggedOutUser = {
-  isLoggedInUser: false
+  isLoggedInUser: false,
 };
