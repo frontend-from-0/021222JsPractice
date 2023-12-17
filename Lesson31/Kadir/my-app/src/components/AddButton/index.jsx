@@ -20,7 +20,7 @@ export const AddButton = ({ key, handleAddItem}) => {
         completed: false,
       });
     handleAddItem(setNewItem);
-    setText(""); // Clear the input field
+    // setText(""); // Clear the input field
   };
 
   return (
