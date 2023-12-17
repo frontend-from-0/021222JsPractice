@@ -27,9 +27,9 @@ export const List = () => {
     setData((prevData) => prevData.filter((dataItem) => dataItem.id !== id));
   };
 
-  const handleAddItem = (newItem) => {
-    setData([...data, newItem]);
-  };
+  // const handleAddItem = (newItem) => {
+  //   setData([...data, newItem]);
+  // };
 
   return (
     <div>
@@ -45,7 +45,7 @@ export const List = () => {
           />
         ))}
       </ul>
-      <AddButton  key={data.id} handleAddItem={handleAddItem} />
+      <AddButton  key={data.id} handleAddItem={handleAddItem} setData={setData} data={data}/>
     </div>
   );
 };
