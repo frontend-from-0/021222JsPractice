@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./styles.css";
 import {List} from "../List";
 
-export const AddButton = () => {
+export const AddButton = ({ key, handleAddItem}) => {
   const [text, setText] = useState("");
   const [newItem, setNewItem] = useState(null); // Define a state to store the newItem
 
@@ -14,15 +14,16 @@ export const AddButton = () => {
     event.preventDefault();
     text.trim() !== "" &&
       setNewItem({
+        key: key+1,
         id: Math.floor(Math.random() * 1000),
         title: text,
         completed: false,
       });
+    handleAddItem(newItem);
     setText(""); // Clear the input field
   };
 
   return (
-    <div>
     <form onSubmit={handleSubmit} >
       <input
         type="text"
@@ -35,7 +36,5 @@ export const AddButton = () => {
         Submit
       </button>
     </form>
-    {newItem && <List newItem={newItem} />}
-    </div>
   );
 };

@@ -45,7 +45,7 @@ export const List = () => {
           />
         ))}
       </ul>
-      <AddButton  newItem ={newItem}/>
+      <AddButton  key={data.id} handleAddItem={handleAddItem} id={data.length}/>
     </div>
   );
 };
