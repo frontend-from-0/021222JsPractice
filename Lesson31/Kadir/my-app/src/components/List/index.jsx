@@ -45,7 +45,7 @@ export const List = () => {
           />
         ))}
       </ul>
-      <AddButton  key={data.id} setData={setData} data={data}/>
+      <AddButton key={data.id} setData={setData} data={data}/>
     </div>
   );
 };

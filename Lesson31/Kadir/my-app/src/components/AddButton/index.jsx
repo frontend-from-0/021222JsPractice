@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import "./styles.css";
-import { List } from "../List";
 
-export const AddButton = ({ key}) => {
+export const AddButton = ({ key, data, setData}) => {
   const [text, setText] = useState("");
   const [newItem, setNewItem] = useState(); // Define a state to store the newItem
 
@@ -19,7 +18,6 @@ export const AddButton = ({ key}) => {
         title: text,
         completed: false,
       });
-    // handleAddItem(setNewItem);
     setText(""); // Clear the input field
   };
 
