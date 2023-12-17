@@ -4,7 +4,7 @@ import {List} from "../List";
 
 export const AddButton = ({ key, handleAddItem}) => {
   const [text, setText] = useState("");
-  const [newItem, setNewItem] = useState(text); // Define a state to store the newItem
+  const [newItem, setNewItem] = useState(); // Define a state to store the newItem
 
   const handleChange = (event) => {
     setText(event.target.value);
@@ -19,7 +19,7 @@ export const AddButton = ({ key, handleAddItem}) => {
         title: text,
         completed: false,
       });
-    handleAddItem(newItem);
+    handleAddItem(setNewItem);
     setText(""); // Clear the input field
   };
 
