@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./styles.css";
 import { List } from "../List";
 
-export const AddButton = ({ key, handleAddItem }) => {
+export const AddButton = ({ key}) => {
   const [text, setText] = useState("");
   const [newItem, setNewItem] = useState(); // Define a state to store the newItem
 
@@ -20,10 +20,11 @@ export const AddButton = ({ key, handleAddItem }) => {
         completed: false,
       });
     // handleAddItem(setNewItem);
-    const handleAddItem = (newItem) => {
-      setData([...data, newItem]);
-    };
     setText(""); // Clear the input field
+  };
+
+  const handleAddItem = (newItem) => {
+    setData([...data, newItem]);
   };
 
   return (
@@ -34,8 +35,9 @@ export const AddButton = ({ key, handleAddItem }) => {
         placeholder="Add new list item"
         value={text}
         onChange={handleChange}
+
       />
-      <button type="submit" className="btn-submit">
+      <button type="submit" className="btn-submit" onClick={handleAddItem}>
         Submit
       </button>
     </form>
