@@ -1,5 +1,6 @@
 import {useState} from "react";
 import { BD_SEARCH_BASE_URL } from '../../urls';
+import "./styles.css";
 
 export const SearchBar=({setRecipes})=>{
   const [searchQuery, setSearchQuery]= useState('');
@@ -17,6 +18,7 @@ export const SearchBar=({setRecipes})=>{
     return(
         <form action="#">
           <input
+            className="input-btn"
             type="text"
             placeholder="Search for recepie"
             onChange={e => setSearchQuery(e.target.value)}

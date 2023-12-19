@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  header {
+    font-size: 40px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", Geneva, Verdana, sans-serif;
+    color: rgb(6, 145, 163);
+    margin: 30px 0;
+  }
+  header:hover {
+    cursor:pointer;
+  }
