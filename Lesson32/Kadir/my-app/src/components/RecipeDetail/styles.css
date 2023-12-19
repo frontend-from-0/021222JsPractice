@@ -1,0 +1,25 @@
+.recipeBoard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+  }
+  
+  img {
+    width: 400px;
+    height: 400px;
+  }
+  .ingredient {
+    padding: 3px;
+  }
+  p {
+    color: red;
+    font-size: large;
+    font-weight: bold;
+  }
+  .recipe-detail {
+    display: flex;
+    flex-direction: column;
+  
+    align-items: center;
+  }
