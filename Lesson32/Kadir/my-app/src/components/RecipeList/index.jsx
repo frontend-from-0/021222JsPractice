@@ -15,7 +15,6 @@ export const RecipeList = ({ recipes, handleRecipeSelect, selectedRecipe }) => {
         {recipes.map((recipe) => (
           <li
             key={recipe.idMeal}
-            // onClick={() => handleRecipeSelect(recipe)}
             onClick={() => {
               toggleClick();
               if (isActive) {
@@ -28,7 +27,7 @@ export const RecipeList = ({ recipes, handleRecipeSelect, selectedRecipe }) => {
               backgroundColor:
                 selectedRecipe && selectedRecipe.idMeal === recipe.idMeal
                   ? "lightblue" // Background color of the clicked item
-                  : "", // Background color of other items, its empty because ı did it color in other component
+                  : "", // Background color of other items
             }}
           >
             {recipe.strMeal}
