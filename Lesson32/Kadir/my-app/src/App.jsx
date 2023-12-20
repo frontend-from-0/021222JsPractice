@@ -9,13 +9,15 @@ export const App = () => {
   const [recipes, setRecipes] = useState([]);
   const [selectedRecipe, setSelectedRecipe] = useState();
 
+
   const handleRecipeSelect = (recipe) => {
     setSelectedRecipe(recipe);
   };
   const handleHomeClick = () => {
     setSelectedRecipe(null);
-    
+
   };
+
 
   useEffect(() => {
     fetch(BD_SEARCH_BASE_URL)
