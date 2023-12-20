@@ -15,7 +15,7 @@ export const App = () => {
   };
   const handleHomeClick = () => {
     setSelectedRecipe(null);
-    setRecipes(data.meals);
+    setRecipes(recipes);
   };
 
 
