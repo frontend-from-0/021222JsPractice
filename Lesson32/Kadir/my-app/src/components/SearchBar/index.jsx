@@ -20,7 +20,7 @@ export const SearchBar=({setRecipes})=>{
           <input
             className="input-btn"
             type="text"
-            placeholder="Search for recepie"
+            placeholder="Search for recipe"
             onChange={e => setSearchQuery(e.target.value)}
           />
           <input type="submit" value="Search" onClick={handleSearch}/>

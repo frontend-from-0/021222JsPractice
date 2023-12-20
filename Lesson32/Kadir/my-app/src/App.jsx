@@ -14,6 +14,7 @@ export const App = () => {
   };
   const handleHomeClick = () => {
     setSelectedRecipe(null);
+    
   };
 
   useEffect(() => {
