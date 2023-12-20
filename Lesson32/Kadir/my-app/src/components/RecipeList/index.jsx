@@ -2,7 +2,7 @@ import "./styles.css";
 import { useState } from "react";
 
 export const RecipeList = ({ recipes, handleRecipeSelect, selectedRecipe }) => {
-  const [isActive, setIsActive] = useState(false);
+  const [isActive, setIsActive] = useState();
 
   const toggleClick = () => {
     setIsActive(!isActive);
