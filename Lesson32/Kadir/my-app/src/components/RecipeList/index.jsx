@@ -16,7 +16,7 @@ export const RecipeList = ({ recipes, handleRecipeSelect, selectedRecipe }) => {
         {recipes.map((recipe) => (
           <li
             key={recipe.idMeal}
-            onClick={toggleClick ? () => handleRecipeSelect(recipe): setIsActive('false')}
+            onClick={toggleClick() ? () => handleRecipeSelect(recipe): setIsActive('false')}
             style={{
               backgroundColor:
                 selectedRecipe && selectedRecipe.idMeal === recipe.idMeal
