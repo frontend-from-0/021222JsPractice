@@ -14,6 +14,10 @@ export const App = () => {
     setSelectedRecipe(recipe);
   };
 
+  const handleHomeClick = () => {
+    setSelectedRecipe(null);
+    // setRecipes(recipes);
+  };
 
 
   useEffect(() => {
@@ -25,10 +29,6 @@ export const App = () => {
       .catch((error) => setRecipes([]));
   }, []);
 
-  const handleHomeClick = () => {
-    setSelectedRecipe(null);
-    setRecipes(recipes);
-  };
 
   return (
     <div className="container">
