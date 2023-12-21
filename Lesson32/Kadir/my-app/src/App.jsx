@@ -16,7 +16,7 @@ export const App = () => {
 
   const handleHomeClick = () => {
     setSelectedRecipe(null);
-    // setRecipes(recipes);
+    window.location.reload();
   };
 
 
