@@ -16,15 +16,16 @@
     justify-content: center;
     align-items: center;
     font-size: 18px;
-    border: 1px solid #ccc;
+    border-left: 6px solid rgb(11, 11, 94);
+    border-radius: 20%;
     padding: 5px;
-    background-color: #f0f0f0;
+    background-color: rgb(241, 241, 212);
     flex-grow: 1;
     min-width: 10%;
   }
   .recipe-list li:hover {
     cursor: pointer;
-    background-color: grey;
+    background-color: rgba(144, 92, 223, 0.753);
     color: #f0f0f0;
   }
   

@@ -8,11 +8,11 @@ form {
     text-align: center;
     padding: 5px;
     font-size: large;
-    border: 1px solid #ccc;
+    border: 1px solid #ac8484;
     font-size: 18px;
   }
   .input-btn:hover {
     cursor: pointer;
-    background-color: grey;
+    background-color: rgb(172, 240, 35);
     color: #f0f0f0;
   }
