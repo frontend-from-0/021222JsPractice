@@ -72,33 +72,33 @@ const liItems = document.body.querySelectorAll('li');
 liItems[0].remove();
 
 // 9. Append a new list item to the end of the ordered list with the text "Last Item".
-    el = document.createElement('li');
+    const el = document.createElement('li');
     el.innerHTML = "Last Item";
     document.getElementById('lists').appendChild(el);
 
 // 10. Add a button (in html) with "Hide images" text. When a button is clicked, change the text of the button to "Show images" and hide all the images on the web page (set display to none).
-    newButton = document.createElement('button');
+    const newButton = document.createElement('button');
     newButton.innerHTML = "Hide images";
     document.getElementById('main').appendChild(newButton);
-    let x=true;
-    newButton.addEventListener("click", myFunction);
-      function myFunction() {
+    let shouldShowImages=true;
+    newButton.addEventListener("click", toggleImages);
+      function toggleImages() {
          // var x = document.querySelectAll('newButton');
         // if (images[0].style.display === "block") {
         // if (false) {
         //   images[0].style.display="block";
         // } else {
-        if(x==true){
+        if(shouldShowImages==true){
           newButton.innerHTML = "Show images";
           images[0].style.display="none";
-          x==false;
+          shouldShowImages==false;
           // console.log('xs= ', x);
           return x;
         } else  {
           newButton.innerHTML = "Hide images";
           images[0].style.display="block";
-          x==true;
+          shouldShowImages==true;
           // console.log('xh= ', x);
-          return x;
+          return shouldShowImages;
         } 
       }
