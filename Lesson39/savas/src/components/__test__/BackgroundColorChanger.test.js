@@ -3,10 +3,10 @@ import { render, fireEvent } from "@testing-library/react";
 import BackgroundColorChanger from "../BackgroundColorChanger";
 
 test("Background color changes on button click", () => {
-  const { getByText, container } = render(<BackgroundColorChanger />);
+  const { getByTestId, container } = render(<BackgroundColorChanger />);
 
-  const greenButton = getByText("Green");
-  const redButton = getByText("Red");
+  const greenButton = getByTestId("green");
+  const redButton = getByTestId("red");
 
   const backgroundColorChangerDiv = container.firstChild;
 

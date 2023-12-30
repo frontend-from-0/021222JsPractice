@@ -1,14 +1,25 @@
 import React from "react";
-import { render, fireEvent } from "@testing-library/react";
+import {
+  render,
+  fireEvent,
+  waitFor,
+  queryAllByTestId,
+} from "@testing-library/react";
 import DialogTest from "../DialogTest";
 
 test("When a button is clicked, a dialog should show up on a screen", () => {
-  const { getByText, queryByText } = render(<DialogTest />);
+  const { getByTestId, queryByTestId } = render(<DialogTest />);
 
-  expect(queryByText("Test Dialog")).toBeNull();
+  expect(queryByTestId("testdialog")).toBeNull();
 
-  const DialogButton = getByText("Open Dialog");
+  const DialogButton = getByTestId("opendialog");
   fireEvent.click(DialogButton);
 
-  expect(getByText("Test Dialog")).toBeInTheDocument();
+  expect(getByTestId("testdialog")).toBeInTheDocument();
+
+  fireEvent.click(document.body);
+
+  waitFor(() => {
+    expect(queryAllByTestId("testdialog")).toBeNull();
+  });
 });

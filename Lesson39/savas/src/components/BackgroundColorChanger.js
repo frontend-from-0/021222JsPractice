@@ -11,8 +11,15 @@ const BackgroundColorChanger = () => {
     <div className="body" style={{ backgroundColor: backgroundColor }}>
       <h1>Background Color Changer</h1>
       <p>Click buttons to change background color!</p>
-      <button onClick={() => changeBackgroundColor("green")}>Green</button>
-      <button onClick={() => changeBackgroundColor("red")}>Red</button>
+      <button
+        data-testid="green"
+        onClick={() => changeBackgroundColor("green")}
+      >
+        Green
+      </button>
+      <button data-testid="red" onClick={() => changeBackgroundColor("red")}>
+        Red
+      </button>
     </div>
   );
 };
