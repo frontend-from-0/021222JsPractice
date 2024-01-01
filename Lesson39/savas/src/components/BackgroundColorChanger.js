@@ -8,7 +8,11 @@ const BackgroundColorChanger = () => {
   };
 
   return (
-    <div className="body" style={{ backgroundColor: backgroundColor }}>
+    <div
+      className="body"
+      data-testid="background"
+      style={{ backgroundColor: backgroundColor }}
+    >
       <h1>Background Color Changer</h1>
       <p>Click buttons to change background color!</p>
       <button

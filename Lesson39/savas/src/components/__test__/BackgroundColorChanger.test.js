@@ -1,20 +1,21 @@
 import React from "react";
-import { render, fireEvent } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import BackgroundColorChanger from "../BackgroundColorChanger";
 
-test("Background color changes on button click", () => {
-  const { getByTestId, container } = render(<BackgroundColorChanger />);
+test("Background color changes on button click", async () => {
+  render(<BackgroundColorChanger />);
 
-  const greenButton = getByTestId("green");
-  const redButton = getByTestId("red");
+  const greenButton = screen.getByTestId("green");
+  const redButton = screen.getByTestId("red");
 
-  const backgroundColorChangerDiv = container.firstChild;
+  const backgroundColorChangerDiv = screen.getByTestId("background");
 
   expect(backgroundColorChangerDiv).toHaveStyle({ backgroundColor: "" });
 
-  fireEvent.click(greenButton);
+  await userEvent.click(greenButton);
   expect(backgroundColorChangerDiv).toHaveStyle({ backgroundColor: "green" });
 
-  fireEvent.click(redButton);
+  await userEvent.click(redButton);
   expect(backgroundColorChangerDiv).toHaveStyle({ backgroundColor: "red" });
 });
