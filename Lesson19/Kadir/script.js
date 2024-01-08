@@ -18,8 +18,20 @@
 	myImage.setAttribute('width', '500');
 
 */
+
+//"Fixing Document is not defined in NodeJS"
+
+// if (typeof window !== "undefined") {
+//   console.log("In Browser");
+//   var x = document.getElementById("msg");
+//   console.log(x);
+// }
+// else {
+//   console.log("In nodeJS");
+// }
+
 // 1. Change the text color of all paragraphs on the page to #272932.
-var paragraphs = document.querySelectorAll('p');
+const paragraphs = document.querySelectorAll('p');
 console.log('Excercise 1', paragraphs);
 for (var i = 0; i < paragraphs.length; i++) {
   paragraphs[i].style.color = 'red';
@@ -43,11 +55,50 @@ console.log(images);
 images[1].remove();
 
 // 5. Add a border to all images on the page (2px solid #272932).
+console.log(images);
+images[0].style.border="2px solid #272932";
+
 // 6. Change the text of the first heading on the page to "Welcome to my Website".
+const headingReplace = document.getElementById('title');
+console.log(headingReplace);
+headingReplace.innerHTML = "Welcome to my Website";
+
+
 // 7. Replace the first image on the page with a new image ("https://picsum.photos/400/200").
+images[0].src="https://picsum.photos/400/200";
+
 // 8. Remove the first list item from the unordered list.
+const liItems = document.body.querySelectorAll('li');
+liItems[0].remove();
+
 // 9. Append a new list item to the end of the ordered list with the text "Last Item".
+    const el = document.createElement('li');
+    el.innerHTML = "Last Item";
+    document.getElementById('lists').appendChild(el);
+
 // 10. Add a button (in html) with "Hide images" text. When a button is clicked, change the text of the button to "Show images" and hide all the images on the web page (set display to none).
-
-
-
+    const newButton = document.createElement('button');
+    newButton.innerText = "Hide images";
+    document.getElementById('main').appendChild(newButton);
+    let shouldShowImages=true;
+    newButton.addEventListener("click", toggleImages);
+      function toggleImages() {
+         // var x = document.querySelectAll('newButton');
+        // if (images[0].style.display === "block") {
+        // if (false) {
+        //   images[0].style.display="block";
+        // } else {
+        if(shouldShowImages){
+          newButton.innerHTML = "Show images";
+          images[0].style.display="none";
+          shouldShowImages==false;
+          // console.log('xs= ', x);
+          return x;
+        } else  {
+          newButton.innerHTML = "Hide images";
+          images[0].style.display="block";
+          shouldShowImages==true;
+          // console.log('xh= ', x);
+          return shouldShowImages;
+        } 
+      }
