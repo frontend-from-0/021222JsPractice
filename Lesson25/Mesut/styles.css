@@ -56,7 +56,7 @@ ul {
 }
 
 .button--success {
-  background-color: #4CAF50;
+  background-color: #af4cad;
 }
 
 .button--success:hover {
@@ -69,5 +69,5 @@ ul {
 }
 
 .button--danger:hover {
-  background-color: #79000cf4;
+  background-color: #b90719f4;
 }
