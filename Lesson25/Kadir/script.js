@@ -35,7 +35,7 @@ function fetchPosts() {
 };
 
 function clearPosts() {
-  postsContainer.innerText = '';
+  postsContainer.innerText ='';
 };
 
 document.getElementById('fetch-button').addEventListener('click', fetchPosts);
