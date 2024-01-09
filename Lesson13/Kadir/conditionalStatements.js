@@ -124,7 +124,7 @@ function checkNumber(num){
 
   if (num==0){
     console.log(num ," is zero");
-  } else if (Math.checkNumber(num)==1){
+  } else if (num > 0){
     console.log(num ," is positive.");
   } else
     console.log(num ," is negative.");
@@ -140,29 +140,40 @@ function checkNumber(num){
 let year=parseInt(prompt("Input year in 'YYYY' number format."));
 
 function leapYear(num){
-  if (num%4===0){
+  if ((0 == num % 4) && (0 != num % 100) || (0 == num % 400)){
     console.log(num +" is a leap year and February takes 29 days");
-  } else
-    console.log(num +" is not a leap year. You need to wait for "+4-(num%4)+" years");
-  }
+  } else {
+    console.log(num +" is not a leap year. You need to wait for "+4-(num%4)+" years")
+  };
+};
 
 leapYear(year);
 
+// let year=parseInt(prompt("Input year in 'YYYY' number format."));
+
+// function leapYear(num){
+//   if (num%4===0){
+//     console.log(num +" is a leap year and February takes 29 days");
+//   } else {
+//     console.log(num +" is not a leap year. You need to wait for " + (4 - (num%4)) + " years")
+//   };
+//  };
+
+// leapYear(year);
+
 // 7. Write a program that takes in a temperature and checks if it's above or below freezing using if else statement.
 
-let temperature=parseInt(prompt("Input outdoor temperature: "));
+let temp=parseInt(prompt("Input outdoor temperature: "));
 
 function getWeather(num){
   if (num<=0){
     console.log(num +" is freezing, stay home, watch TV!");
-  } else if (num<=5){
-    console.log(num +" is uncomfortable, make your decision..");
   } else {
     console.log(num +" is great, go out, watch the sun and do some sports..");
   }
 }
 
-getWeather(temperature);
+getWeather(temp);
 
 // 8. Write a program that takes in a person's height and weight and checks if they are considered underweight, normal, overweight, or obese using if else statement.
 // Body Mass Index (BMI) is a person’s weight in kilograms (or pounds) divided by the square of height in meters (or feet). A high BMI can indicate high body fatness. 
@@ -172,15 +183,17 @@ getWeather(temperature);
 // 25.0 – 29.9	Overweight
 // 30.0 and Above	Obesity
 
-let height=parseInt(prompt("Input your height(m)= "));
-let weight=parseInt(prompt("Input your weight(kg)= "));
+function indexBMI(height, width){
+  let height=parseInt(prompt("Input your height(m)= "));
+  let weight=parseInt(prompt("Input your weight(kg)= "));
 
-function indexBMI(h, w){
-  if (w/(h^2)<=18.5){
+  const bmi = width/(height^2);
+
+  if (bmi<=18.5){
     console.log("You are underweight. You need to eat much more..");
-  } else if (w/(h^2)>18.5 && w/(h^2)<=24.9){
+  } else if (bmi>18.5 && bmi<=24.9){
     console.log(" You have Healthy Weight. So go on what you are doing..");
-  } else if (w/(h^2)>24.9 && w/(h^2)<=29.9){
+  } else if (bmi>24.9 && bmi<=29.9){
     console.log(" You are overweight. Get an action soon..");
   } else {
     console.log(" You have obesity. Go to a doctor..");
@@ -213,14 +226,14 @@ checkAgeGroup(age);
 let age2=parseInt(prompt("Input your age: "));
 let student=prompt("Are you a student (Y/N): ");
 
-function canVote(a, b){
-  if (a<18 && b==="Y"){
+function canVote(age2, isStudent){
+  if (age2<18 && isStudent==="Y"){
     console.log("You are a student and not old enough to vote");
-  } else if (a>=18 && a<66 && b==="N"){
+  } else if (age2>=18 && age2<66 && isStudent==="N"){
     console.log("You are eligible to vote");
-  } else if (a>65 && b==="N"){
+  } else if (age2>65 && isStudent==="N"){
     console.log("You are a senior citizen");
-  } else if (a>=18 && b==="Y"){
+  } else if (age2>=18 && isStudent==="Y"){
     console.log("You are old enough to vote");
   } else {
     console.log("You are not old enough to vote");
@@ -234,12 +247,12 @@ canVote(age2, student);
 let salary=parseInt(prompt("What is your current salary ($)? "));
 let experience=parseInt(prompt("What is your years of experience? "));
 
-function jobOffer(a, b){
-  if (a<=30000 && b<5){
+function jobOffer(salary, experience){
+  if (salary<=30000 && experience<5){
     console.log("Sorry, we cannot offer you the job at this time");
-  } else if (a<50000 && b<10 && b>=5){
+  } else if (salary<50000 && experience<10 && experience>=5){
     console.log("We can offer you the job at a lower salary");
-  } else if (a>=50000 && b>=10){
+  } else if (salary>=50000 && experience>=10){
     console.log("We can offer you the job at the requested salary");
   } else {
     console.log("We will contact with you for further opportunities ");
@@ -304,7 +317,7 @@ function findSeasonName(month) {
     //   console.log(month, "Fall");
     // }
   // }
-  // findSeasonName(5);
+  findSeasonName(5);
   // findSeasonName(1);
   // findSeasonName(10);
 
@@ -332,48 +345,21 @@ grade(yourGrade);
 
 // 15. Write a program that asks the user to enter their age, and then calculates and displays their age in dog years (where one human year is equivalent to seven dog years). If the user enters a negative number or zero, display an error message.
 
-let ageOfDogYear=parseInt(prompt("Please enter your age to calculate dog-year equivalent: "));
+function getUserAge() {  
+  let userInput;  
+  do {  
+    userInput = prompt("Please enter your age to calculate dog-year equivalent: ");  
+    console.log('number:', parseInt(userInput) < 0);  
+// only move further if input can be converted to a positive number 
+  } while (!parseInt(userInput) || parseInt(userInput) < 0);  
+  convertToDogYears(userInput);  
+};  
 
-function dogYear(num){
-  if (num>0){
-    console.log("Your dog-year equivalent: "+num*7);
-  } else {
-    do {  //works only one loop
-    // alert("You must exist. Please enter a valid age");
-    console.log("You must exist. Please enter a valid age");
-    num=parseInt(prompt("Please re-enter your age to calculate dog-year equivalent= "));
-    }
-      while(num>0);
-  }
+function convertToDogYears(userInput) {  
+  const age = parseInt(userInput);  
 
-                // DO while nested if 
-                    // do{
-                    //     if (num<=0){
-                    //     // alert("You must exist. Please enter a valid age");
-                    //     console.log("You must exist. Please enter a valid age");
-                    //     num=parseInt(prompt("Please re-enter your age to calculate dog-year equivalent= "));
-                    //     } else {
-                    //       console.log("Your dog-year equivalent: ",num*7);
-                    //       break;
-                    //     }
-                    // }
-                    // while(num>0);
+  const dogAge = age * 7;  
+  console.log("Your dog-year equivalent: " + dogAge);  
+};  
 
-                // DO while switch trial- not working
-                    // do{
-                    //     switch (num){ 
-                    //       case num<=0:
-                    //         // alert("You must exist. Please enter a valid age");
-                    //         console.log("You must exist. Please enter a valid age");
-                    //         num=parseInt(prompt("Please re-enter your age to calculate dog-year equivalent= "));
-                    //         break;
-                    //       default:
-                    //         console.log("Your dog-year equivalent: ",num*7);
-                    //         break;
-                    //     }
-                    //   }
-                    //   while(num>0);
-
-}
-}
-dogYear(ageOfDogYear);
+getUserAge();
