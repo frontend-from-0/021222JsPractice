@@ -14,44 +14,64 @@ window.addEventListener("load", () => {
       titleInput.value = data.title;
       bodyInput.value = data.body;
     });
+
   const handleSubmit = (event) => {
-     event.preventDefault();
     postsContainer.innerText = "";
-   
-    fetch(`${URLToBeEdited}/${postId}`, {
-      method: "PUT",
-      body: JSON.stringify({
-        id: postId,
-        title: titleInput.value,
-        body: bodyInput.value,
-        userId: 1,
-      }),
-      headers: {
-        "Content-type": "application/json; charset=UTF-8",
-      },
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        const listItem = document.createElement("li");
-        listItem.classList.add("post");
+    event.preventDefault();
+    if (
+      titleInput.value == "" ||
+      bodyInput.value == ""
+    ) {
+      
+      const listItem = document.createElement("li");
+      listItem.classList.add("post");
 
-        const notification = document.createElement("p");
-        notification.classList.add("post-body");
-        notification.innerText = "Data successfully updated!";
-        listItem.appendChild(notification);
+      const notification = document.createElement("p");
+      notification.classList.add("post-body");
+      notification.innerText = "Title or/and Body is empty";
+      listItem.appendChild(notification);
 
-        const heading = document.createElement("h2");
-        heading.classList.add("post-title");
-        heading.innerText = data.title;
-        listItem.appendChild(heading);
+      postsContainer.appendChild(listItem);
+    }else{
+      postsContainer.innerText = "";
 
-        const paragraph = document.createElement("p");
-        paragraph.classList.add("post-body");
-        paragraph.innerText = data.body;
-        listItem.appendChild(paragraph);
+      fetch(`${URLToBeEdited}/${postId}`, {
+        method: "PUT",
+        body: JSON.stringify({
+          id: postId,
+          title: titleInput.value,
+          body: bodyInput.value,
+          userId: 1,
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          const listItem = document.createElement("li");
+          listItem.classList.add("post");
+  
+          const notification = document.createElement("p");
+          notification.classList.add("post-body");
+          notification.innerText = "Data successfully updated!";
+          listItem.appendChild(notification);
+  
+          const heading = document.createElement("h2");
+          heading.classList.add("post-title");
+          heading.innerText = data.title;
+          listItem.appendChild(heading);
+  
+          const paragraph = document.createElement("p");
+          paragraph.classList.add("post-body");
+          paragraph.innerText = data.body;
+          listItem.appendChild(paragraph);
+  
+          postsContainer.appendChild(listItem);
+        });
+    }
 
-        postsContainer.appendChild(listItem);
-      });
+    
   };
 
   inputContainer.addEventListener("submit", handleSubmit);

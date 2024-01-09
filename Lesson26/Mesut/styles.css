@@ -56,6 +56,11 @@ input {
   padding: 20px;
 }
 
+.warning{
+  background-color: rgb(197, 105, 105);
+  text-align: center;
+  font-size: 24px;
+}
 .post-title {
   font-size: 20px;
   font-weight: bold;
@@ -65,7 +70,7 @@ input {
 
 .post-body {
   color: #666;
-  margin: 0;
+  margin: 0 0 16px;
 }
 
 .button {
@@ -92,7 +97,10 @@ input {
 .button--danger {
   background-color: #7a0916;
 }
-
+.button--edit--delete {
+  background-color: #7a0916;
+  margin-right: 5px;
+}
 .button--danger:hover {
   background-color: #79000cf4;
 }
