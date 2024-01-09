@@ -26,8 +26,7 @@ function fetchPosts() {
 				deleteButton.classList.add('button');
 				deleteButton.classList.add('button--delete');
 				deleteButton.textContent = "Delete";
-				deleteButton.id="delete-post";
-				deleteButton.href = `${URL}/${post.id}`;
+				deleteButton.addEventListener('click', () => deletePost(post.id));
 				listItem.appendChild(deleteButton);
 
 
@@ -53,8 +52,8 @@ function clearPosts() {
   postsContainer.innerHTML = '';
 };
 
-function deletePost() {
-	fetch(`${URL}/${post.id}`, {
+function deletePost(postId) {
+	fetch(`${URL}/${postId}`, {
 		method: 'DELETE',
 	})
 	.then(fetchPosts())
