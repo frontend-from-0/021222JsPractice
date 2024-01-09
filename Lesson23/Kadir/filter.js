@@ -362,7 +362,7 @@ const studentsExercise9 = [
 	},
 ];
 
-const studentsExercise9Result = studentsExercise9.filter((student) => !student.grade.includes('D'));
+const studentsExercise9Result = studentsExercise9.filter((student) => student.grade>=('C-'));
 console.log('Exercise 9', studentsExercise9Result);
 
 // Exercise 10:
