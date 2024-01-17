@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ListItem } from "../ListItem";
-import { AddButton } from "../AddButton";
+import { NewTodoForm } from "../AddButton";
 import "./styles.css";
 
 export const List = () => {
@@ -27,9 +27,7 @@ export const List = () => {
     setData((prevData) => prevData.filter((dataItem) => dataItem.id !== id));
   };
 
-  // const handleAddItem = (newItem) => {
-  //   setData([...data, newItem]);
-  // };
+  
 
   return (
     <div>
@@ -45,7 +43,7 @@ export const List = () => {
           />
         ))}
       </ul>
-      <AddButton key={data.id} setData={setData} data={data}/>
+      <AddButton setData={setData}/>
     </div>
   );
 };

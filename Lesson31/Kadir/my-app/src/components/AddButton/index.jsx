@@ -1,30 +1,27 @@
 import React, { useState } from "react";
 import "./styles.css";
 
-export const AddButton = ({ key, data, setData}) => {
-  const [text, setText] = useState("");
-  const [newItem, setNewItem] = useState(); // Define a state to store the newItem
+export const NewTodoForm = ({ key, data, setData}) => {
+
+  const [newItem, setNewItem] = useState(""); // Define a state to store the newItem
 
   const handleChange = (event) => {
-    setText(event.target.value);
+    setNewItem(event.target.value);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    text.trim() !== "" &&
+    const trimmedText = newItem.trim();  
+    trimmedText !== "" && 
       setNewItem({
-        key: key + 1,
-        id: Math.floor(Math.random() * 1000),
-        title: text,
+        id:Date.now(),
+        title: trimmedText,
         completed: false,
       });
-    setText(""); // Clear the input field
+      setNewItem(""); // Clear the input field
   };
 
-  const handleAddItem = (newItem) => {
-    setData([...data, newItem]);
-  };
-
+  
   return (
     <form onSubmit={handleSubmit}>
       <input
@@ -35,7 +32,7 @@ export const AddButton = ({ key, data, setData}) => {
         onChange={handleChange}
 
       />
-      <button type="submit" className="btn-submit" onClick={handleAddItem}>
+      <button type="submit" className="btn-submit">
         Submit
       </button>
     </form>
