@@ -268,10 +268,14 @@ const productsExercise6 = [
 		quantity: 14,
 	},
 ];
+const productsExercise6Result = productsExercise6.filter(inStock => inStock.quantity > 0);
+console.log(productsExercise6Result);
 
 // Exercise 7:
 // Given an array of numbers, filter out the numbers that are divisible by 3.
 const numbersExercise7 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const numbersExercise7Result = numbersExercise7.filter(num => num % 3 !== 0);
+console.log(numbersExercise7Result);
 
 // Exercise 8:
 // Given an array of strings, filter out the strings that have more than 5 characters.
@@ -287,6 +291,8 @@ const wordsExercise8 = [
 	'island',
 	'jungle',
 ];
+const wordsExercise8Result = wordsExercise8.filter(word => word.length <= 5);
+console.log(wordsExercise8Result);
 
 // Exercise 9:
 // Given an array of objects representing students, filter out the students who have a grade lower than C.
@@ -352,6 +358,9 @@ const studentsExercise9 = [
 		grade: 'B-',
 	},
 ];
+const studentsExercise9Result = studentsExercise9.filter(student => student.grade[0] !== "D" || student.grade !== "F");
+console.log(studentsExercise9Result);
+
 
 // Exercise 10:
 // Given an array of user objects, filter out the users who have a name starting with the letter "J".
@@ -417,3 +426,5 @@ const usersExercise10 = [
 		email: 'sophia@example.com',
 	},
 ];
+const usersExercise10Result = usersExercise10.filter(user => user.name[0] !== "J");
+console.log(usersExercise10);
