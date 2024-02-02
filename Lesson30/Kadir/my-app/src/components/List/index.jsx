@@ -1,5 +1,6 @@
 import './styles.css';
 import {ListItem} from '../ListItem';
+import React from 'react';
 
 export const List = () => {
   const data = [
@@ -18,3 +19,6 @@ return (
   </ul>
 )
 };
+
+
+
