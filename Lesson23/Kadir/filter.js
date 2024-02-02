@@ -362,7 +362,7 @@ const studentsExercise9 = [
 	},
 ];
 
-const studentsExercise9Result = studentsExercise9.filter((student) => student.grade>=('C-'));
+const studentsExercise9Result = studentsExercise9.filter((student) => student.grade.toUpperCase() !== ('C-') && student.grade[0].toUpperCase() !== ('D') && student.grade[0].toUpperCase() !== ('E');
 console.log('Exercise 9', studentsExercise9Result);
 
 // Exercise 10:
