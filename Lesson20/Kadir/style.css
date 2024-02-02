@@ -64,16 +64,17 @@ li:last-child {
   border-bottom: none;
 }
 
-.completed {
-  text-decoration: line-through;
-  opacity: 0.5;
-}
-
 .button--light {
   background-color: #fff;
   border: none;
+  text-decoration:none; 
 }
 
 .button--light:hover {
   cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
 }
