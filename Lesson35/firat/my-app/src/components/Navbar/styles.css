@@ -1,0 +1,39 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background-color: var(--color-background);
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-list {
+  list-style-type: none;
+  display: flex;
+}
+
+.nav-list--right {
+  justify-content: start;
+}
+
+.nav-list--left {
+  justify-content: end;
+}
+
+.nav__item {
+  margin-right: 20px;
+  text-decoration: none;
+  color: var(--color-text-dark);
+}
+
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.active {
+  text-decoration: underline; 
+  color: var(--color-text-darker);
+}

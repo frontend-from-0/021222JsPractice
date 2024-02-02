@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Posts</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-  <div class="container">
-    <h1>Posts</h1>
-    <ul id="post-list"></ul>
-  </div>
+  <head>
+    <title>Posts</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Posts</h1>
 
-  <script src="script.js"></script>
-</body>
+      <div class="controls-container">
+        <button class="button button--success" id="fetch-button">
+          Fetch post
+        </button>
+        <button class="button button--danger" id="clear-button">
+          Clear post
+        </button>
+      </div>
+
+      <ul id="post-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>

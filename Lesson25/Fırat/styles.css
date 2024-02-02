@@ -14,6 +14,10 @@ body {
   margin: 0 auto;
   padding: 20px;
 }
+.controls-container {
+  display: flex;
+  justify-content: space-evenly;
+}
 
 h1 {
   text-align: center;
@@ -46,7 +50,6 @@ ul {
 
 .button {
   padding: 10px 20px;
-  
   color: white;
   border: none;
   border-radius: 4px;
@@ -56,13 +59,12 @@ ul {
 }
 
 .button--success {
-  background-color: #4CAF50;
+  background-color: #4caf50;
 }
 
 .button--success:hover {
   background-color: #45a049;
 }
-
 
 .button--danger {
   background-color: #7a0916;
