@@ -14,8 +14,11 @@ body {
   margin: 0 auto;
   padding: 20px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+	flex-direction: column;
+	/* flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: center; */
 }
 
 .controls-container {
@@ -50,31 +53,40 @@ input {
 }
 
 .post {
+  display: grid;
+  grid-template-columns: 6fr 1fr;
+  grid-template-rows: 0.5fr 1.5fr;
+  grid-template-areas: 
+    "header edit"
+    "main delete";
+  justify-items: stretch;
   background-color: #fff;
   border-radius: 5px;
   margin-bottom: 20px;
-  padding: 20px;
+  padding: 10px;
 }
 
 .post-title {
   font-size: 20px;
   font-weight: bold;
+  grid-area: header;
   color: #333;
   margin: 0 0 10px;
 }
 
 .post-body {
   color: #666;
+  grid-area: main;
   margin: 0;
 }
 
 .button {
   padding: 10px 20px;
-  
   color: white;
   border: none;
   border-radius: 4px;
   font-size: 16px;
+  text-decoration: none;
   cursor: pointer;
   margin-bottom: 20px;
 }
@@ -96,6 +108,15 @@ input {
   background-color: #79000cf4;
 }
 
+.button--edit {
+  grid-area: edit;
+  text-align: center;
+}
+
+.button--return {
+  text-align: center;
+}
+
 .button--primary {
   text-decoration: none;
   background-color: #15287a;
@@ -106,4 +127,8 @@ input {
   background-color: #0d1d67;
 }
 
-
+.button--delete {
+  background-color: #1a0407;
+  color:#e6cece;
+  text-decoration-thickness: 50px;
+}

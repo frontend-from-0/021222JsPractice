@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Posts</title>
+		<title>Edit Posts</title>
 		<link rel="stylesheet" type="text/css" href="../styles.css" />
 	</head>
 	<body>
 		<div class="container">
-			<h1>Posts</h1>
+			<h1>Chosen Post</h1>
+			<form id="edit-post-form" novalidate>
+				<label for="edit-title">Title</label>
+					<input type="text" name="title" id="edit-title" />
+				<label for="edit-body">Body</label>
+					<input type="text" name="body" id="edit-body" />
+				<input type="submit" value="Edit post" class="button button--success"/>
+			</form>
+			<ul class="container" id="posts-container"></ul>
 		</div>
-
+		<a class="button button--success button--return" href="../index.html">Return to posts</a>
 		<script src="script.js"></script>
 	</body>
 </html>
