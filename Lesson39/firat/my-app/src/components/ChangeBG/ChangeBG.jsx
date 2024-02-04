@@ -14,8 +14,15 @@ const ChangeBG = () => {
 
   return (
     <div className={`color-changer ${backgroundColor}`}>
-      <button onClick={handleGreenButtonClick}>Change to Green</button>
-      <button onClick={handleRedButtonClick}>Change to Red</button>
+      <button
+        data-testid="change-green-button"
+        onClick={handleGreenButtonClick}
+      >
+        Change to Green
+      </button>
+      <button data-testid="change-red-button" onClick={handleRedButtonClick}>
+        Change to Red
+      </button>
     </div>
   );
 };
